@@ -199,6 +199,11 @@ img {
     float: left;
 }
 
+.swiper-pagination-bullet {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .watch-pager .swiper-pagination-bullet:nth-child(1) {
     background-image: url(img/watch/nav/nav1.png);
 }
