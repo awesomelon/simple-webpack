@@ -19,8 +19,23 @@ module.exports = {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                exclude: '/node_modules',
-                use: ['babel-loader']
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env'],
+                        plugins: [
+                            '@babel/plugin-transform-runtime',
+                            '@babel/plugin-transform-spread',
+                            '@babel/plugin-transform-destructuring',
+                            '@babel/plugin-transform-block-scoping',
+                            '@babel/plugin-transform-arrow-functions',
+                            '@babel/plugin-transform-template-literals',
+                            '@babel/plugin-transform-computed-properties',
+                            '@babel/plugin-transform-shorthand-properties'
+                        ]
+                    }
+                }
             },
             {
                 test: /\.html$/,
@@ -59,7 +74,13 @@ module.exports = {
     },
     plugins: [
         new HtmlWebPackPlugin({
+            title: 'webpack test',
             template: './public/index.html',
+            inject: true,
+            minify: {
+                removeComments: true,
+                collapseWhitespace: false
+            },
             filename: 'index.html'
         }),
 

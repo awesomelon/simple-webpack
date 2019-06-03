@@ -1,15 +1,80 @@
+<!-- 방재호 v1.5 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>webpack test</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="viewport" content="width=540,user-scalable=no" />
+    <meta name="apple-mobile-web-app-title" content="NAVER" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 
 <body>
-    <div id='root'></div>
+    <div id="wrapper">
+        <div id="top">
+            <div id="year"></div>
+            <div id="title"></div>
+            <div id="subtitle"></div>
+            <div id="logo"></div>
+        </div>
+        <section id="reward">
+            <div>
+                <img src="../src/img/category/reward.png" alt="" class="category">
+                <div class="arrow arrow-reward"></div>
+                <img src="../src/img/reward/bg1.png" alt="">
+            </div>
+        </section>
+        <section id="fashion">
+            <div class="swiper-container swiper-fashion">
+                <img src="../src/img/category/fashion.png" alt="" class="category">
+                <div class="arrow arrow-fashion"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../src/img/fashion/bg1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../src/img/fashion/bg2.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../src/img/fashion/bg3.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../src/img/fashion/bg4.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../src/img/fashion/bg5.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../src/img/fashion/bg6.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../src/img/fashion/bg7.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../src/img/fashion/bg8.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../src/img/fashion/bg9.png" alt=""></div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination fashion-pager"></div>
+        </section>
+        <section id="watch">
+            <div class="swiper-container swiper-watch">
+                <img src="../src/img/category/watch.png" alt="" class="category">
+                <div class="arrow arrow-watch"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../src/img/watch/bg1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../src/img/watch/bg2.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../src/img/watch/bg3.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../src/img/watch/bg4.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../src/img/watch/bg5.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../src/img/watch/bg6.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../src/img/watch/bg7.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../src/img/watch/bg8.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../src/img/watch/bg9.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../src/img/watch/bg10.png" alt=""></div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination watch-pager"></div>
+        </section>
+    </div>
 </body>
 
 </html>
