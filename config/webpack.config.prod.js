@@ -74,6 +74,7 @@ module.exports = {
         }),
 
         new ImageminPlugin({
+            test: /\.(jpe?g|png|gif|svg)$/i,
             cache: true
         }),
 
