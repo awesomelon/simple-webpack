@@ -53,7 +53,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jp(e*)g)$/,
+                test: /\.(jpe?g|png|gif|svg)$/i,
                 loader: 'file-loader'
             }
         ]
@@ -74,9 +74,7 @@ module.exports = {
         }),
 
         new ImageminPlugin({
-            pngquant: {
-                quality: '95-100'
-            }
+            cache: true
         }),
 
         new CleanWebpackPlugin()
