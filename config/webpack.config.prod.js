@@ -17,7 +17,10 @@ module.exports = {
                 test: /\.js/,
                 exclude: /(node_modules|bower_components|node_modules\/(?!(dom7|ssr-window|swiper)\/).*)/,
                 use: {
-                    loader: 'babel-loader'
+                    loader: 'babel-loader',
+                    options: {
+                        rootMode: 'upward'
+                    }
                 }
             },
             {
