@@ -5,7 +5,7 @@ const path = require('path'),
     ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = {
-    entry: ['@babel/polyfill', './src/index.js'],
+    entry: ['./src/index.js'],
     output: {
         filename: 'bundle.[contenthash].js',
         path: path.resolve('build')
@@ -14,13 +14,10 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
-                exclude: /node_modules\/(?!(dom7|ssr-window|swiper)\/).*/,
+                test: /\.js/,
+                exclude: /(node_modules|bower_components|node_modules\/(?!(dom7|ssr-window|swiper)\/).*)/,
                 use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
+                    loader: 'babel-loader'
                 }
             },
             {
