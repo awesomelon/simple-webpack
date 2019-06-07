@@ -10,8 +10,8 @@ module.exports = function(api) {
             [
                 '@babel/env',
                 {
-                    useBuiltIns: 'usage', // or "entry"
-                    corejs: 3,
+                    useBuiltIns: 'usage',
+                    corejs: { version: 3, proposals: true },
                     debug: true
                 }
             ]
