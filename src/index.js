@@ -1,8 +1,17 @@
 import './reset.css';
 import './swiper.min.css';
+import './event.css';
 import './main.css';
-import init from './mainController';
+
+import { ready, load } from './event';
+import main from './main';
+import clickEvent from './clickEvents';
 
 window.addEventListener('DOMContentLoaded', function() {
-    init();
+    clickEvent();
+    ready();
+});
+window.addEventListener('load', function() {
+    main();
+    load();
 });

@@ -1,5 +1,340 @@
-#wrapper {
-    width: 540px;
-    margin: 0 auto;
+/* 기본 */
+
+html {
+    width: 540px !important;
     position: relative;
+    margin: 0 auto;
+}
+
+.d-none {
+    display: none;
+}
+
+/* 이벤트 페이지 종료 */
+
+/* topMenu 시작 */
+
+.topMenu {
+    width: 540px;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -270px;
+    z-index: 10;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+#title {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+}
+
+#title1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    height: 60px;
+}
+
+#title1.down_title1 {
+    background: url('../src/img/common/top/down_title1.png') no-repeat center;
+}
+#title1.down_title2 {
+    background: url('../src/img/common/top/down_title2.png') no-repeat center;
+}
+#title1.down_title3 {
+    background: url('../src/img/common/top/down_title3.png') no-repeat center;
+}
+#title1.down_title4 {
+    background: url('../src/img/common/top/down_title4.png') no-repeat center;
+}
+
+#title2 {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    height: 60px;
+    display: none;
+}
+
+#title2.up_title1 {
+    background: url('../src/img/common/top/up_title1.png') no-repeat center;
+}
+#title2.up_title2 {
+    background: url('../src/img/common/top/up_title2.png') no-repeat center;
+}
+#title2.up_title3 {
+    background: url('../src/img/common/top/up_title3.png') no-repeat center;
+}
+#title2.up_title4 {
+    background: url('../src/img/common/top/up_title4.png') no-repeat center;
+}
+
+#menuBg {
+    width: 540px;
+    height: 0;
+    position: relative;
+    top: 120px;
+    left: 0;
+    overflow: hidden;
+}
+
+#menuBox {
+    width: 540px;
+}
+
+.menuBtn {
+    width: 540px;
+    height: 80px;
+}
+
+.eventBtn {
+    width: 540px;
+    height: 80px;
+}
+
+#home {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: url(./img/home.png) no-repeat center;
+    cursor: pointer;
+}
+
+/* topMenu 종료 */
+
+/* banner 시작 */
+
+.banner {
+    width: 540px;
+    height: 300px;
+    position: absolute;
+    z-index: 2;
+    top: 60px;
+}
+
+/* banner 종료 */
+
+/* sub_nav 시작 */
+
+#sub_nav3 {
+    width: 540px;
+    height: 40px;
+    background: url(./img/common/top/topbg_02.png) no-repeat center;
+    z-index: 9;
+    position: fixed;
+    top: 120px;
+    display: none;
+}
+
+#sub_nav4 {
+    width: 540px;
+    height: 40px;
+    background: url(./img/common/top/topbg_02.png) no-repeat center;
+    z-index: 9;
+    position: fixed;
+    top: 120px;
+    display: none;
+}
+
+.swiper-container-sub3Nav {
+    width: 540px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.swiper-container-sub4Nav {
+    width: 540px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.reward {
+    width: 180px;
+    height: 40px;
+}
+
+.fashion {
+    width: 200px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fashion.on {
+    background-position: center 11px;
+}
+
+.food {
+    width: 180px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.food.on {
+    background-position: center 11px;
+}
+
+#fashion1 {
+    background-image: url('./img/common/navi/3/nav1_off.png?v=8');
+}
+
+#fashion1.on {
+    background-image: url('./img/common/navi/3/nav1_on.png?v=8');
+}
+
+#fashion2 {
+    background-image: url('./img/common/navi/3/nav2_off.png?v=8');
+}
+
+#fashion2.on {
+    background-image: url('./img/common/navi/3/nav2_on.png?v=8');
+}
+
+#fashion3 {
+    background-position: center center;
+    background-image: url('./img/common/navi/3/nav3_off.png?v=8');
+}
+
+#fashion3.on {
+    background-position: center 11px;
+    background-image: url('./img/common/navi/3/nav3_on.png?v=8');
+}
+
+#fashion4 {
+    background-image: url('./img/common/navi/3/nav4_off.png?v=8');
+}
+
+#fashion4.on {
+    background-image: url('./img/common/navi/3/nav4_on.png?v=8');
+}
+
+#fashion5 {
+    background-position: center center;
+    background-image: url('./img/common/navi/3/nav5_off.png?v=8');
+}
+
+#fashion5.on {
+    background-position: center 11px;
+    background-image: url('./img/common/navi/3/nav5_on.png?v=8');
+}
+
+#food1 {
+    background-image: url('./img/common/navi/4/nav1_off.png?v=8');
+}
+
+#food1.on {
+    background-image: url('./img/common/navi/4/nav1_on.png?v=8');
+}
+
+#food2 {
+    background-image: url('./img/common/navi/4/nav2_off.png?v=8');
+}
+
+#food2.on {
+    background-image: url('./img/common/navi/4/nav2_on.png?v=8');
+}
+
+#food3 {
+    background-image: url('./img/common/navi/4/nav3_off.png?v=8');
+}
+
+#food3.on {
+    background-image: url('./img/common/navi/4/nav3_on.png?v=8');
+}
+
+#food4 {
+    background-image: url('./img/common/navi/4/nav4_off.png?v=8');
+}
+
+#food4.on {
+    background-image: url('./img/common/navi/4/nav4_on.png?v=8');
+}
+
+#food5 {
+    background-image: url('./img/common/navi/4/nav5_off.png?v=8');
+}
+
+#food5.on {
+    background-image: url('./img/common/navi/4/nav5_on.png?v=8');
+}
+
+/* sub_nav 종료 */
+
+.swiper-container {
+    width: 540px !important;
+    height: auto;
+    top: 120px;
+    /*background: rgb(244, 243, 239);*/
+}
+
+.swiper-slide {
+    width: 540px;
+    position: relative;
+}
+
+.top_btn {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    left: calc(50% - -165px);
+    /*top: 736px;*/
+    bottom: 10px;
+    z-index: 2;
+}
+
+.top_btn > img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.back_btn {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    left: calc(50% - 265px);
+    /*top: 736px;*/
+    bottom: 10px;
+    z-index: 2;
+}
+
+.back_btn > img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.eventback {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    left: calc(50% - 265px);
+    bottom: 90px;
+    z-index: 3;
 }

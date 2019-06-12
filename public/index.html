@@ -1,47 +1,158 @@
-<!-- 방재호 v1.0 -->
+﻿<!-- 방재호 v1.0 -->
 <!DOCTYPE html>
-<html lang="ko">
-<?php include $_SERVER['DOCUMENT_ROOT'].'/common_file/common.php'; ?>
+<html style="height:100%;">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <?php include $_SERVER['DOCUMENT_ROOT'].'/common_file/common.php'; ?>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Script-Type" content="text/javascript" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
-    <meta name="viewport" content="width=540,user-scalable=no" />
-    <meta name="apple-mobile-web-app-title" content="NAVER" />
-    <meta http-equiv="Expires" content="0" />
-    <meta http-equiv="Pragma" content="no-cache" />
+    <meta name="viewport" content="width=540" />
 
+    <title>세이브존 대전점</title>
 
-    <title>현대백화점 목동점</title>
+    <?php include $_SERVER['DOCUMENT_ROOT'].'/common_file/analytics.html'; ?>
+
+    <script>
+        //지점명
+        window.dm = '대전점';
+    </script>
 </head>
 
-<body>
-    <div id="wrapper">
-
-        <section id="watch">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="../src/img/watch/bg1.png" alt=""></div>
-                    <div class="swiper-slide"><img src="../src/img/watch/bg2.png" alt=""></div>
-                    <div class="swiper-slide"><img src="../src/img/watch/bg3.png" alt=""></div>
-                    <div class="swiper-slide"><img src="../src/img/watch/bg4.png" alt=""></div>
-                    <div class="swiper-slide"><img src="../src/img/watch/bg5.png" alt=""></div>
-                    <div class="swiper-slide"><img src="../src/img/watch/bg6.png" alt=""></div>
-                    <div class="swiper-slide"><img src="../src/img/watch/bg7.png" alt=""></div>
-                    <div class="swiper-slide"><img src="../src/img/watch/bg8.png" alt=""></div>
-                    <div class="swiper-slide"><img src="../src/img/watch/bg9.png" alt=""></div>
-                    <div class="swiper-slide"><img src="../src/img/watch/bg10.png" alt=""></div>
-                </div>
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-
-        </section>
+<body class="text-center">
+    <div id="loader" style="
+        width:540px;
+        height: 100%;
+        z-index: 11;
+        position: fixed;
+        left:50%;
+        margin-left:-270px;
+        top:0;
+        background-color: #fff;
+    ">
+        <img src="../src/img/loading.gif" alt="로딩중 이미지" style="
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        ">
     </div>
 
+    <div class="topMenu">
+        <div id="home"></div>
+        <div id="title">
+            <div class="down_title1" id="title1"></div>
+            <div class="down_title2" id="title2"></div>
+        </div>
+
+        <div id="menuBg">
+            <div id="menuBox">
+                <div class="menuBtn" id="menuBtn1" data-index="1">
+                    <img src="../src/img/common/top/nav_bg3_01.png" alt="사은행사">
+                </div>
+                <div class="eventBtn" id="menuBtn2" data-index="2" style="display: none;">
+                    <img src="../src/img/common/top/nav_bg3_02.png" alt="이벤트">
+                </div>
+                <div class="menuBtn" id="menuBtn3" data-index="3">
+                    <img src="../src/img/common/top/nav_bg3_03.png" alt="패션관">
+                </div>
+                <div class="menuBtn" id="menuBtn4" data-index="4">
+                    <img src="../src/img/common/top/nav_bg3_04.png" alt="식픔관">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sub_nav" id="sub_nav3">
+        <div class="swiper-container-sub3Nav">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div id="fashion1" class="fashion"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div id="fashion2" class="fashion"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div id="fashion3" class="fashion"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div id="fashion4" class="fashion"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div id="fashion5" class="fashion"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sub_nav" id="sub_nav4">
+        <div class="swiper-container-sub4Nav">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div id="food1" class="food"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div id="food2" class="food"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div id="food3" class="food"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div id="food4" class="food"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div id="food5" class="food"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 플로팅 버튼 -->
+    <div id="floatingBox"></div>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- reward -->
+            <div class="swiper-slide" data-hash="sub1" data-name="사은행사">
+                <img src="../src/img/bg/bg1.jpg?v=<?php echo $version?>" class="sub_content" alt="사은행사" />
+            </div>
+
+            <!-- sub3 start -->
+            <div class="swiper-slide" data-hash="sub3" data-name="아웃도어/스포츠/제화">
+                <img src="../src/img/bg/bg3_1.jpg?v=<?php echo $version?>" class="sub_content" alt="아웃도어/스포츠/제화" />
+            </div>
+            <div class="swiper-slide" data-hash="sub3_2" data-name="숙녀캐주얼/숙녀정장">
+                <img src="../src/img/bg/bg3_2.jpg?v=<?php echo $version?>" class="sub_content" alt="숙녀캐주얼/숙녀정장" />
+            </div>
+            <div class="swiper-slide" data-hash="sub3_3" data-name="영캐주얼/이지캐주얼">
+                <img src="../src/img/bg/bg3_3.jpg?v=<?php echo $version?>" class="sub_content" alt="영캐주얼/이지캐주얼" />
+            </div>
+            <div class="swiper-slide" data-hash="sub3_4" data-name="멘즈/골프웨어">
+                <img src="../src/img/bg/bg3_4.jpg?v=<?php echo $version?>" class="sub_content" alt="멘즈/골프웨어" />
+            </div>
+            <div class="swiper-slide" data-hash="sub3_5" data-name="홈패션/아동">
+                <img src="../src/img/bg/bg3_5.jpg?v=<?php echo $version?>" class="sub_content" alt="홈패션/아동" />
+            </div>
+            <!-- sub3 end -->
+
+            <!-- sub4 start -->
+            <div class="swiper-slide" data-hash="sub4" data-name="야채/청과">
+                <img src="../src/img/bg/bg4_1.jpg?v=<?php echo $version?>" class="sub_content" alt="야채/청과" />
+            </div>
+            <div class="swiper-slide" data-hash="sub4_2" data-name="정육/수산">
+                <img src="../src/img/bg/bg4_2.jpg?v=<?php echo $version?>" class="sub_content" alt="정육/수산" />
+            </div>
+            <div class="swiper-slide" data-hash="sub4_3" data-name="일반식품1">
+                <img src="../src/img/bg/bg4_3.jpg?v=<?php echo $version?>" class="sub_content" alt="일반식품1" />
+            </div>
+            <div class="swiper-slide" data-hash="sub4_4" data-name="일반식품2">
+                <img src="../src/img/bg/bg4_4.jpg?v=<?php echo $version?>" class="sub_content" alt="일반식품2" />
+            </div>
+            <div class="swiper-slide" data-hash="sub4_5" data-name="비식품">
+                <img src="../src/img/bg/bg4_5.jpg?v=<?php echo $version?>" class="sub_content" alt="비식품" />
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

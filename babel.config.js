@@ -8,19 +8,16 @@ module.exports = function(api) {
     return {
         presets: [
             [
-                '@babel/env',
+                '@babel/preset-env',
                 {
                     useBuiltIns: 'usage',
                     corejs: { version: 3, proposals: true },
+                    targets: {
+                        browsers: '> 0.5%'
+                    },
+                    modules: false,
+                    loose: true,
                     debug: true
-                }
-            ]
-        ],
-        plugins: [
-            [
-                '@babel/transform-runtime',
-                {
-                    corejs: 3
                 }
             ]
         ]
