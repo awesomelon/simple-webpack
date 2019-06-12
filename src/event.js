@@ -1,4 +1,4 @@
-import { mySwiper, mySwiperSub3Nav, mySwiperSub4Nav } from './makeSwipe.js';
+import { mySwiper } from './makeSwipe.js';
 import $ from 'jquery';
 /********************************************** */
 var setCookie = function(name, value, exp) {

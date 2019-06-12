@@ -1,7 +1,7 @@
 import { Swiper } from './swiper.esm';
 import $ from 'jquery';
-import { changeNav } from './main';
 import { TweenMax } from 'gsap';
+import { changeNav } from './main';
 import slideCount from './counting';
 import { closeMenu } from './clickEvents';
 var setTime;
