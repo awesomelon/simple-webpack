@@ -13,11 +13,18 @@ module.exports = function(api) {
                     useBuiltIns: 'usage',
                     corejs: { version: 3, proposals: true },
                     targets: {
-                        browsers: '> 0.5%'
+                        browsers: ['last 2 version', 'ie >= 10']
                     },
-                    modules: false,
                     loose: true,
                     debug: true
+                }
+            ]
+        ],
+        plugins: [
+            [
+                '@babel/plugin-transform-runtime',
+                {
+                    corejs: 3
                 }
             ]
         ]
