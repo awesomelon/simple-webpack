@@ -1,44 +1,30 @@
 import { mySwiper, NavBindClick, slideChangeStart, slideChangeEndEv } from './makeSwipe.js';
 import $ from 'jquery';
-export default function() {
-    // 모든 컨텐츠가 로드되면, 스와이퍼 관련 초기화 진행
-    swiperInit();
-
-    changeNav();
-
-    slideChangeStart();
-
-    NavBindClick();
-
-    slideChangeEndEv();
-}
-
-function swiperInit() {
-    mySwiper.slideToLoop(getSwiperhashIndex(document.location.hash), 0);
-}
 
 // 스와이퍼가 해쉬값을 가지고 움직이는 형태라면, 최초 시작 페이지를 url hash 값으로 이동한다.
-function getSwiperhashIndex(hashStr) {
+let getSwiperhashIndex = hashStr => {
     // 지정된 해시값이 없다면, sub1 의 해시값을 가지는 페이지로 이동
     if (hashStr == '' || typeof hashStr == 'undefined') {
         document.location.href = document.location.href + '#sub1';
     }
     // 지정된 해시값으로 이동
     else {
-        var swiperTotal = mySwiper.slides.length;
-        for (var i = 0; i < swiperTotal; i++) {
-            var hashName = '#' + $(mySwiper.slides[i]).attr('data-hash');
+        let swiperTotal = mySwiper.slides.length;
+        for (let i = 0; i < swiperTotal; i++) {
+            let hashName = '#' + $(mySwiper.slides[i]).attr('data-hash');
 
             if (hashName == hashStr) {
                 return mySwiper.realIndex;
             }
         }
     }
-}
+};
+
+let swiperInit = () => mySwiper.slideToLoop(getSwiperhashIndex(document.location.hash), 0);
 
 // 각 페이지 당 sub_nav 활성화 함수
-export function changeNav() {
-    var hashStr = document
+export let changeNav = () => {
+    let hashStr = document
             .querySelector('.swiper-container  .swiper-slide-active')
             .getAttribute('data-hash'),
         hashNumber = hashStr.substr(3, 1);
@@ -59,12 +45,8 @@ export function changeNav() {
             .children()
             .removeClass('on');
 
-        $('.topMenu').css({
-            borderBottom: 'none'
-        });
-        $('.swiper-container').css({
-            top: 160
-        });
+        $('.topMenu').css({ borderBottom: 'none' });
+        $('.swiper-container').css({ top: 160 });
     }
     // 서브1,2일 때 공통으로 쓰는것
     else {
@@ -88,4 +70,13 @@ export function changeNav() {
         $('#sub_nav3').hide();
         $('#sub_nav4').show();
     }
+};
+
+export default function() {
+    // 모든 컨텐츠가 로드되면, 스와이퍼 관련 초기화 진행
+    swiperInit();
+    changeNav();
+    slideChangeStart();
+    NavBindClick();
+    slideChangeEndEv();
 }

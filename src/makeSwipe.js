@@ -4,7 +4,7 @@ import { closeMenu } from './clickEvents';
 import { TweenMax } from 'gsap';
 import $ from 'jquery';
 
-export var mySwiper = new Swiper('.swiper-container', {
+export let mySwiper = new Swiper('.swiper-container', {
     loop: true,
     hashNavigation: {
         replaceState: true,
@@ -18,22 +18,39 @@ export var mySwiper = new Swiper('.swiper-container', {
     }
 });
 
-export var mySwiperSub3Nav = new Swiper('.swiper-container-sub3Nav', {
+export let mySwiperSub3Nav = new Swiper('.swiper-container-sub3Nav', {
     width: 540,
     spaceBetween: -350
 });
 
-export var mySwiperSub4Nav = new Swiper('.swiper-container-sub4Nav', {
+export let mySwiperSub4Nav = new Swiper('.swiper-container-sub4Nav', {
     width: 540,
     spaceBetween: -370
 });
 
-mySwiper.on('slideChange', slideMove);
-mySwiper.on('slideChangeTransitionEnd', slideChangeEndEv);
-mySwiper.on('slideChangeTransitionStart', slideChangeStart);
+let subNavMove = (index, ele, startNum) => {
+    let naviImg = document.querySelectorAll(ele);
+    for (let i = 0, len = naviImg.length; i < len; i++) {
+        naviImg[i].classList.remove('on');
+    }
+    naviImg[index - startNum].classList.add('on');
+    ele == '.fashion'
+        ? mySwiperSub3Nav.slideTo(index - startNum)
+        : mySwiperSub4Nav.slideTo(index - startNum);
+};
 
-export function slideChangeStart() {
-    var index = mySwiper.realIndex + 1,
+let subNavOnClick = (el, startNum) => {
+    let els = document.querySelectorAll(el);
+    [].forEach.call(els, function(navs, index) {
+        navs.addEventListener('click', function() {
+            // console.log(index);
+            mySwiper.slideTo(index + startNum);
+        });
+    });
+};
+
+export let slideChangeStart = () => {
+    let index = mySwiper.realIndex + 1,
         hashStr = document
             .querySelector('.swiper-container  .swiper-slide-active')
             .getAttribute('data-hash'),
@@ -45,79 +62,41 @@ export function slideChangeStart() {
         subNavMove(index, '.food', $(document.querySelector("[data-hash='sub4']")).index());
 
     changeNav();
-}
+};
 
-function subNavMove(index, ele, startNum) {
-    var naviImg = document.querySelectorAll(ele);
-    for (var i = 0, len = naviImg.length; i < len; i++) {
-        naviImg[i].classList.remove('on');
-    }
-    naviImg[index - startNum].classList.add('on');
-    ele == '.fashion'
-        ? mySwiperSub3Nav.slideTo(index - startNum)
-        : mySwiperSub4Nav.slideTo(index - startNum);
-}
-
-export function NavBindClick() {
+export let NavBindClick = () => {
     subNavOnClick('.fashion', $(document.querySelector("[data-hash='sub3']")).index());
     subNavOnClick('.food', $(document.querySelector("[data-hash='sub4']")).index());
-}
+};
 
-function subNavOnClick(el, startNum) {
-    var els = document.querySelectorAll(el);
-    [].forEach.call(els, function(navs, index) {
-        navs.addEventListener('click', function() {
-            // console.log(index);
-            mySwiper.slideTo(index + startNum);
-        });
-    });
-}
+let slideMove = () => closeMenu();
 
-function slideMove() {
-    closeMenu();
-}
+let analytics = () => {};
 
-export function slideChangeEndEv() {
-    // 카운팅을 위한 part title 값 설정
-    var index = mySwiper.realIndex + 1;
-    // 슬라이드 카운팅
-    var title = $('.swiper-container > .swiper-wrapper > .swiper-slide-active').attr('data-name');
-    slideCount(index, title);
-    slideMoveEnd();
-}
+let eventActiveHt = activeHt => TweenMax.to('.swiper-container', 0.2, { height: activeHt });
 
-function slideMoveEnd() {
+let activeHeightSet = () => {
+    let activeHt = $('.swiper-slide-active > .sub_content').height();
+    eventActiveHt(activeHt);
+};
+
+let scrollUp = () => TweenMax.to('body, html', 0.2, { scrollTop: 0 });
+
+let slideMoveEnd = () => {
     activeHeightSet();
     scrollUp();
     analytics();
-}
+};
 
-function activeHeightSet() {
-    var activeHt = $('.swiper-slide-active > .sub_content').height();
-    eventActiveHt(activeHt);
-}
+export let slideChangeEndEv = () => {
+    // 카운팅을 위한 part title 값 설정
+    let index = mySwiper.realIndex + 1;
+    // 슬라이드 카운팅
+    let title = $('.swiper-container > .swiper-wrapper > .swiper-slide-active').attr('data-name');
+    slideCount(index, title);
+    slideMoveEnd();
+};
 
-function eventActiveHt(activeHt) {
-    TweenMax.to('.swiper-container', 0.2, { height: activeHt });
-}
-
-function scrollUp() {
-    TweenMax.to('body, html', 0.2, { scrollTop: 0 });
-}
-
-function analytics() {
-    // setTime = setTimeout(function() {
-    //     gtag('event', 'swiper', {
-    //         event_category: 'sub',
-    //         event_label: $('.swiper-slide-active').attr('data-hash')
-    //     });
-    //     wcs.event('sub', $('.swiper-slide-active').attr('data-hash'));
-    // }, 1000);
-    // var preidx = mySwiper.previousIndex;
-    // var idx = mySwiper.realIndex + 1;
-    //console.log("이전 트래킹 번호 = " + preidx);
-    //console.log("현재 트래킹 번호 = " + idx);
-    // page.stayTimePage(preidx, function() {
-    //     page.clickPage(idx);
-    // });
-}
+mySwiper.on('slideChange', slideMove);
+mySwiper.on('slideChangeTransitionEnd', slideChangeEndEv);
+mySwiper.on('slideChangeTransitionStart', slideChangeStart);
