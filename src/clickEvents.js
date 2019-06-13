@@ -1,6 +1,3 @@
-import $ from 'jquery';
-import { TweenMax } from 'gsap';
-
 export default function() {
     $('#logo').on('click', goMain);
     $('#home').on('click', goMain);
@@ -10,7 +7,9 @@ export default function() {
 }
 
 function openMenu() {
-    var hashStr = document.querySelector('.swiper-container  .swiper-slide-active').getAttribute('data-hash'),
+    var hashStr = document
+            .querySelector('.swiper-container  .swiper-slide-active')
+            .getAttribute('data-hash'),
         hashNumber = hashStr.substr(3, 1);
 
     var count = 0;

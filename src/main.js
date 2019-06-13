@@ -1,6 +1,5 @@
 import { mySwiper, NavBindClick, slideChangeStart, slideChangeEndEv } from './makeSwipe.js';
 
-import $ from 'jquery';
 export default function() {
     // 모든 컨텐츠가 로드되면, 스와이퍼 관련 초기화 진행
     swiperInit();
@@ -39,7 +38,9 @@ function getSwiperhashIndex(hashStr) {
 
 // 각 페이지 당 sub_nav 활성화 함수
 export function changeNav() {
-    var hashStr = document.querySelector('.swiper-container  .swiper-slide-active').getAttribute('data-hash'),
+    var hashStr = document
+            .querySelector('.swiper-container  .swiper-slide-active')
+            .getAttribute('data-hash'),
         hashNumber = hashStr.substr(3, 1);
 
     // $('#title1>img').attr('src', downImg.src);

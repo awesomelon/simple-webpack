@@ -1,10 +1,6 @@
-import { Swiper } from './swiper.esm';
-import $ from 'jquery';
-import { TweenMax } from 'gsap';
 import { changeNav } from './main';
 import slideCount from './counting';
 import { closeMenu } from './clickEvents';
-var setTime;
 export var mySwiper = new Swiper('.swiper-container', {
     loop: true,
     hashNavigation: {
@@ -35,11 +31,15 @@ mySwiper.on('slideChangeTransitionStart', slideChangeStart);
 
 export function slideChangeStart() {
     var index = mySwiper.realIndex + 1,
-        hashStr = document.querySelector('.swiper-container  .swiper-slide-active').getAttribute('data-hash'),
+        hashStr = document
+            .querySelector('.swiper-container  .swiper-slide-active')
+            .getAttribute('data-hash'),
         hashNumber = hashStr.substr(3, 1);
 
-    if (hashNumber === '3') subNavMove(index, '.fashion', $(document.querySelector("[data-hash='sub3']")).index());
-    if (hashNumber === '4') subNavMove(index, '.food', $(document.querySelector("[data-hash='sub4']")).index());
+    if (hashNumber === '3')
+        subNavMove(index, '.fashion', $(document.querySelector("[data-hash='sub3']")).index());
+    if (hashNumber === '4')
+        subNavMove(index, '.food', $(document.querySelector("[data-hash='sub4']")).index());
 
     changeNav();
 }
@@ -50,7 +50,9 @@ function subNavMove(index, ele, startNum) {
         naviImg[i].classList.remove('on');
     }
     naviImg[index - startNum].classList.add('on');
-    ele == '.fashion' ? mySwiperSub3Nav.slideTo(index - startNum) : mySwiperSub4Nav.slideTo(index - startNum);
+    ele == '.fashion'
+        ? mySwiperSub3Nav.slideTo(index - startNum)
+        : mySwiperSub4Nav.slideTo(index - startNum);
 }
 
 export function NavBindClick() {

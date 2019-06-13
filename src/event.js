@@ -1,5 +1,5 @@
 import { mySwiper } from './makeSwipe.js';
-import $ from 'jquery';
+
 /********************************************** */
 var setCookie = function(name, value, exp) {
     var date = new Date();
