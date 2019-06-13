@@ -1,4 +1,5 @@
 // 슬라이드시 카운팅
+import $ from 'jquery';
 export default function slideCount(part, title) {
     $.ajax({
         type: 'GET',

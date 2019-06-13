@@ -1,5 +1,5 @@
 import { mySwiper, NavBindClick, slideChangeStart, slideChangeEndEv } from './makeSwipe.js';
-
+import $ from 'jquery';
 export default function() {
     // 모든 컨텐츠가 로드되면, 스와이퍼 관련 초기화 진행
     swiperInit();

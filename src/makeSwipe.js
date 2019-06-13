@@ -1,6 +1,9 @@
 import { changeNav } from './main';
 import slideCount from './counting';
 import { closeMenu } from './clickEvents';
+import { TweenMax } from 'gsap';
+import $ from 'jquery';
+
 export var mySwiper = new Swiper('.swiper-container', {
     loop: true,
     hashNavigation: {

@@ -1,3 +1,6 @@
+import { TweenMax } from 'gsap';
+import $ from 'jquery';
+
 export default function() {
     $('#logo').on('click', goMain);
     $('#home').on('click', goMain);
