@@ -1,5 +1,6 @@
 /* Variabes */
 /* Mixin's */
+
 #wrapper {
     width: 540px;
     margin: 0 auto;
@@ -7,7 +8,7 @@
     overflow: hidden;
 }
 
-#text {
+.text {
     height: 24px;
     line-height: 24px;
     font-size: 24px;
@@ -16,7 +17,7 @@
     text-align: center;
 }
 
-#cardWrap {
+.cardWrap {
     position: absolute;
     width: 525px;
     top: 50px;
@@ -25,7 +26,7 @@
     transform: translateX(-50%);
 }
 
-#container {
+.container {
     margin-top: 100px;
 }
 
@@ -47,25 +48,25 @@ button {
     z-index: 2;
 }
 
-#game-start {
+.game-start {
     display: block;
 }
 
-#game-restart {
+.game-restart {
     display: none;
 }
 
-#entry {
+.entry {
     top: 510px;
     display: none;
 }
 
-#coverer {
+.coverer {
     width: 540px;
     margin: 10px auto;
     padding-left: 32px;
 }
-#coverer:after {
+.coverer:after {
     content: '';
     display: table;
     clear: both;
@@ -128,7 +129,7 @@ button {
     background-size: cover;
 }
 
-/* 팝업 관련 시작 */
+/* �앹뾽 愿��� �쒖옉 */
 
 input {
     border: none;
