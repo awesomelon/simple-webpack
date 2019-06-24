@@ -1,340 +1,217 @@
-/* 기본 */
-
-html {
-    width: 540px !important;
-    position: relative;
+/* Variabes */
+/* Mixin's */
+#wrapper {
+    width: 540px;
     margin: 0 auto;
+    position: relative;
+    overflow: hidden;
 }
 
-.d-none {
-    display: none;
+#text {
+    height: 24px;
+    line-height: 24px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
 }
 
-/* 이벤트 페이지 종료 */
-
-/* topMenu 시작 */
-
-.topMenu {
-    width: 540px;
-    height: 120px;
-    position: fixed;
-    top: 0;
+#cardWrap {
+    position: absolute;
+    width: 525px;
+    top: 50px;
     left: 50%;
-    margin-left: -270px;
-    z-index: 10;
-    background-color: #fff;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+
+#container {
+    margin-top: 100px;
+}
+
+button {
+    border-radius: 5px;
+    background: #82d2e5;
+    color: #fff;
+    border: solid 1px #fff;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 18px 10px;
+    width: 145px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
     box-sizing: border-box;
-    border-bottom: 1px solid #e6e6e6;
-}
-
-#title {
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -30px;
-    cursor: pointer;
-    background-repeat: no-repeat;
     transform: translateX(-50%);
+    outline: none;
+    z-index: 2;
 }
 
-#title1 {
+#game-start {
+    display: block;
+}
+
+#game-restart {
+    display: none;
+}
+
+#entry {
+    top: 510px;
+    display: none;
+}
+
+#coverer {
+    width: 540px;
+    margin: 10px auto;
+    padding-left: 32px;
+}
+#coverer:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+[data-view='card'] {
+    transform: rotateY(180deg);
+    width: 145px;
+    height: 210px;
+    float: left;
+    cursor: pointer;
+    margin: 15px;
+    background-image: url(./cardImage/cardback.jpg);
+    background-size: cover;
+}
+
+[data-view='card']:nth-child(5) {
+    margin-left: 190px;
+}
+
+.flipped {
+    transition: transform 0.6s !important;
+    transform-style: preserve-3d !important;
+    position: relative;
+    transform: rotateY(0deg);
+}
+.reverse {
+    transition: transform 0.6s !important;
+    transform-style: preserve-3d !important;
+    position: relative;
+    transform: rotateY(180deg);
+}
+.correct {
+    opacity: 0.5;
+    transition: opacity 0.6s !important;
+    cursor: default;
+    transform-style: preserve-3d !important;
+    position: relative;
+    transform: rotateY(0deg);
+}
+/* Icons */
+.correct[data-item='DA'],
+.flipped[data-item='DA'] {
+    background: url('./cardImage/DA.png') left center no-repeat;
+    background-size: cover;
+}
+.correct[data-item='SA'],
+.flipped[data-item='SA'] {
+    background: url('./cardImage/SA.png') left center no-repeat;
+    background-size: cover;
+}
+.correct[data-item='HA'],
+.flipped[data-item='HA'] {
+    background: url('./cardImage/HA.png') left center no-repeat;
+    background-size: cover;
+}
+
+.correct[data-item='CA'],
+.flipped[data-item='CA'] {
+    background: url('./cardImage/CA.png') left center no-repeat;
+    background-size: cover;
+}
+
+/* 팝업 관련 시작 */
+
+input {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+#finishPop,
+#alreadyPop {
     position: absolute;
+    display: none;
+    z-index: 2;
+}
+
+#popup {
+    width: 540px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 240px;
+    display: none;
+    z-index: 2;
+}
+
+#enterPop {
+    position: absolute;
+    top: -580px;
+    z-index: 2;
+}
+
+#name,
+#phone {
+    position: absolute;
+    width: 426px;
+    left: 52px;
+    height: 62px;
+    font-size: 20px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+#name {
+    top: 200px;
+}
+
+#phone {
+    top: 275px;
+}
+
+#address {
+    top: 373px;
+}
+
+#submit,
+#cancel {
+    width: 205px;
+    height: 66px;
+    position: absolute;
+    top: 355px;
+    font-size: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0);
+}
+
+#submit {
+    left: 55px;
+}
+
+#cancel {
+    right: 48px;
+}
+
+.popClose {
+    position: absolute;
+    top: 266px;
+    left: 125px;
+    width: 267px;
     height: 60px;
 }
 
-#title1.down_title1 {
-    background: url('../src/img/common/top/down_title1.png') no-repeat center;
-}
-#title1.down_title2 {
-    background: url('../src/img/common/top/down_title2.png') no-repeat center;
-}
-#title1.down_title3 {
-    background: url('../src/img/common/top/down_title3.png') no-repeat center;
-}
-#title1.down_title4 {
-    background: url('../src/img/common/top/down_title4.png') no-repeat center;
-}
-
-#title2 {
-    background-color: #fff;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 240px;
-    height: 60px;
-    display: none;
-}
-
-#title2.up_title1 {
-    background: url('../src/img/common/top/up_title1.png') no-repeat center;
-}
-#title2.up_title2 {
-    background: url('../src/img/common/top/up_title2.png') no-repeat center;
-}
-#title2.up_title3 {
-    background: url('../src/img/common/top/up_title3.png') no-repeat center;
-}
-#title2.up_title4 {
-    background: url('../src/img/common/top/up_title4.png') no-repeat center;
-}
-
-#menuBg {
-    width: 540px;
-    height: 0;
-    position: relative;
-    top: 120px;
-    left: 0;
-    overflow: hidden;
-}
-
-#menuBox {
-    width: 540px;
-}
-
-.menuBtn {
-    width: 540px;
-    height: 80px;
-}
-
-.eventBtn {
-    width: 540px;
-    height: 80px;
-}
-
-#home {
-    width: 100px;
-    height: 100px;
-    background-color: aqua;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    background: url(./img/home.png) no-repeat center;
-    cursor: pointer;
-}
-
-/* topMenu 종료 */
-
-/* banner 시작 */
-
-.banner {
-    width: 540px;
-    height: 300px;
-    position: absolute;
-    z-index: 2;
-    top: 60px;
-}
-
-/* banner 종료 */
-
-/* sub_nav 시작 */
-
-#sub_nav3 {
-    width: 540px;
-    height: 40px;
-    background: url(./img/common/top/topbg_02.png) no-repeat center;
-    z-index: 9;
-    position: fixed;
-    top: 120px;
-    display: none;
-}
-
-#sub_nav4 {
-    width: 540px;
-    height: 40px;
-    background: url(./img/common/top/topbg_02.png) no-repeat center;
-    z-index: 9;
-    position: fixed;
-    top: 120px;
-    display: none;
-}
-
-.swiper-container-sub3Nav {
-    width: 540px;
-    height: 40px;
-    overflow: hidden;
-}
-
-.swiper-container-sub4Nav {
-    width: 540px;
-    height: 40px;
-    overflow: hidden;
-}
-
-.reward {
-    width: 180px;
-    height: 40px;
-}
-
-.fashion {
-    width: 200px;
-    height: 40px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.fashion.on {
-    background-position: center 11px;
-}
-
-.food {
-    width: 180px;
-    height: 40px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.food.on {
-    background-position: center 11px;
-}
-
-#fashion1 {
-    background-image: url('./img/common/navi/3/nav1_off.png?v=8');
-}
-
-#fashion1.on {
-    background-image: url('./img/common/navi/3/nav1_on.png?v=8');
-}
-
-#fashion2 {
-    background-image: url('./img/common/navi/3/nav2_off.png?v=8');
-}
-
-#fashion2.on {
-    background-image: url('./img/common/navi/3/nav2_on.png?v=8');
-}
-
-#fashion3 {
-    background-position: center center;
-    background-image: url('./img/common/navi/3/nav3_off.png?v=8');
-}
-
-#fashion3.on {
-    background-position: center 11px;
-    background-image: url('./img/common/navi/3/nav3_on.png?v=8');
-}
-
-#fashion4 {
-    background-image: url('./img/common/navi/3/nav4_off.png?v=8');
-}
-
-#fashion4.on {
-    background-image: url('./img/common/navi/3/nav4_on.png?v=8');
-}
-
-#fashion5 {
-    background-position: center center;
-    background-image: url('./img/common/navi/3/nav5_off.png?v=8');
-}
-
-#fashion5.on {
-    background-position: center 11px;
-    background-image: url('./img/common/navi/3/nav5_on.png?v=8');
-}
-
-#food1 {
-    background-image: url('./img/common/navi/4/nav1_off.png?v=8');
-}
-
-#food1.on {
-    background-image: url('./img/common/navi/4/nav1_on.png?v=8');
-}
-
-#food2 {
-    background-image: url('./img/common/navi/4/nav2_off.png?v=8');
-}
-
-#food2.on {
-    background-image: url('./img/common/navi/4/nav2_on.png?v=8');
-}
-
-#food3 {
-    background-image: url('./img/common/navi/4/nav3_off.png?v=8');
-}
-
-#food3.on {
-    background-image: url('./img/common/navi/4/nav3_on.png?v=8');
-}
-
-#food4 {
-    background-image: url('./img/common/navi/4/nav4_off.png?v=8');
-}
-
-#food4.on {
-    background-image: url('./img/common/navi/4/nav4_on.png?v=8');
-}
-
-#food5 {
-    background-image: url('./img/common/navi/4/nav5_off.png?v=8');
-}
-
-#food5.on {
-    background-image: url('./img/common/navi/4/nav5_on.png?v=8');
-}
-
-/* sub_nav 종료 */
-
-.swiper-container {
-    width: 540px !important;
-    height: auto;
-    top: 120px;
-    /*background: rgb(244, 243, 239);*/
-}
-
-.swiper-slide {
-    width: 540px;
-    position: relative;
-}
-
-.top_btn {
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    left: calc(50% - -165px);
-    /*top: 736px;*/
-    bottom: 10px;
-    z-index: 2;
-}
-
-.top_btn > img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-.back_btn {
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    left: calc(50% - 265px);
-    /*top: 736px;*/
-    bottom: 10px;
-    z-index: 2;
-}
-
-.back_btn > img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-.eventback {
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    left: calc(50% - 265px);
-    bottom: 90px;
-    z-index: 3;
-}
+/**/
