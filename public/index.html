@@ -4,59 +4,69 @@
 <?php include $_SERVER['DOCUMENT_ROOT'].'/common_file/common.php'; ?>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="viewport" content="width=540,user-scalable=no" />
+    <meta name="apple-mobile-web-app-title" content="NAVER" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+
+    <?php include $_SERVER['DOCUMENT_ROOT'].'/common_file/analytics.html'; ?>
+
+    <title></title>
 </head>
 
 <body>
     <div id="wrapper">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="../src/img/bg1.png" alt="">
-                    <div class="cardWrap">
-                        <h3 class="text">게임시작 버튼을 눌러주세요</h3>
-                        <button class="game-start">START</button>
-                        <button class="game-restart">RESTART</button>
-                        <div class="container">
-                        </div>
-                    </div>
-                    <button class="entry">응모하기</button>
-                </div>
-                <div class="swiper-slide">
-                    <img src="../src/img/bg1.png" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="../src/img/bg1.png" alt="">
-                </div>
-            </div>
-        </div>
+        <aside id="complete-pop"><img src="../src/img/finish_pop.png" alt=""></aside>
 
-        <div class="popWrap">
-            <!-- pop background -->
-            <div id="popup"></div>
-            <!-- important pop -->
-            <div id="enterPop">
-                <img src="../src/img/input.png" />
-                <!-- form -->
-                <form id="form" onclick="return false">
-                    <input type="text" id="name" name="name" placeholder="성명">
-                    <input type="tel" id="phone" name="phone" placeholder="휴대폰" maxlength="13">
-                    <input type="hidden" id="message" name="message">
-                    <input type="submit" id="submit">
-                </form>
-                <!-- enterPop close btn -->
-                <input type="button" id="cancel">
-            </div>
-            <div id="finishPop" class="etcPop">
-                <img src="../src/img/finish_pop.png" />
-            </div>
-        </div>
+        <aside id="entry-pop">
+            <input type="text" placeholder="성명" name="name" id="name" autocomplete="off">
+            <input type="tel" placeholder="휴대폰" name="phone" id="phone" maxlength="13" autocomplete="off">
+            <button id="entry-ok"></button>
+            <button id="entry-cancel"></button>
+            <img src="../src/img/input.png" alt="">
+        </aside>
+
+        <section id="section">
+            <article id="contents" class='d-none'>
+                <div id="contents-close-btn"></div>
+                <img src="../src/img/page1_bg.png" alt="" class="content_bg">
+                <img src="../src/img/eventRead.png" alt="" class="read_event">
+                <div class="agree_wrap">
+                    <img src="../src/img/down_off.png" alt="" class="arrow">
+                    <div class="check_box"></div>
+                    <img src="../src/img/agreeDownText.png" alt="" class="agree_text">
+                </div>
+                <div class="entry t-center">
+                    <img src="../src/img/enter_btn.png" alt="" class="entry-btn">
+                    <img src="../src/img/back_btn.png" alt="" class="other-view-btn">
+                </div>
+            </article>
+            <article class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../src/img/1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../src/img/2.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../src/img/3.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../src/img/4.png" alt="">
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <div id="cover"></div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
 </body>
 
 </html>

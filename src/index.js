@@ -1,6 +1,4 @@
-import './reset.css';
-import './swiper.min.css';
-import './main.css';
-import INIT from './js/card';
+import './app.css';
+import { MYAPP } from './js/app.js';
 
-window.addEventListener('DOMContentLoaded', INIT);
+window.addEventListener('DOMContentLoaded', () => MYAPP.init());
