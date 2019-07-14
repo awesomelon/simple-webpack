@@ -3,6 +3,11 @@
   License: none (public domain)
 */
 
+* {
+    /* 터치할때 영역 안보이게 */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 html,
 body,
 div,
