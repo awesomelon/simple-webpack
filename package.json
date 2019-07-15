@@ -47,7 +47,6 @@
         "regenerator": "^0.14.1",
         "regenerator-runtime": "^0.13.2",
         "ssr-window": "^1.0.1",
-        "swiper": "^4.5.0",
-        "terser-webpack-plugin": "^1.3.0"
+        "swiper": "^4.5.0"
     }
 }

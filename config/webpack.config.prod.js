@@ -2,8 +2,7 @@ const path = require('path'),
     HtmlWebPackPlugin = require('html-webpack-plugin'),
     MiniCssExtractPlugin = require('mini-css-extract-plugin'),
     CleanWebpackPlugin = require('clean-webpack-plugin'),
-    ImageminPlugin = require('imagemin-webpack-plugin').default,
-    TerserPlugin = require('terser-webpack-plugin');
+    ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = {
     entry: ['./src/index.js'],
@@ -62,13 +61,7 @@ module.exports = {
             }
         ]
     },
-    optimization: {
-        minimizer: [
-            new TerserPlugin({
-                test: /\.js(\?.*)?$/i
-            })
-        ]
-    },
+
     plugins: [
         new HtmlWebPackPlugin({
             title: 'webpack test',
