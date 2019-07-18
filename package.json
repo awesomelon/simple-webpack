@@ -9,7 +9,7 @@
         "build": "webpack --config ./config/webpack.config.prod"
     },
     "keywords": [],
-    "author": "",
+    "author": "awesomelon <awesomelon@naver.com>",
     "license": "MIT",
     "browsers": "> 0.25%",
     "devDependencies": {
@@ -50,5 +50,6 @@
         "regenerator-runtime": "^0.13.2",
         "ssr-window": "^1.0.1",
         "swiper": "^4.5.0"
-    }
+    },
+    "repository": "https://github.com/awesomelon/webpack-finalSetting.git"
 }
