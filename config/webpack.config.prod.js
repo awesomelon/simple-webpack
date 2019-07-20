@@ -3,7 +3,8 @@ const path = require('path'),
     MiniCssExtractPlugin = require('mini-css-extract-plugin'),
     CleanWebpackPlugin = require('clean-webpack-plugin'),
     ImageminPlugin = require('imagemin-webpack-plugin').default,
-    TerserPlugin = require('terser-webpack-plugin');
+    TerserPlugin = require('terser-webpack-plugin'),
+    OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
     entry: ['./src/index.js'],
@@ -66,7 +67,8 @@ module.exports = {
         minimizer: [
             new TerserPlugin({
                 test: /\.js(\?.*)?$/i
-            })
+            }),
+            new OptimizeCSSAssetsPlugin({})
         ]
     },
     plugins: [
