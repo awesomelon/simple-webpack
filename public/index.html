@@ -6,55 +6,79 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
     <meta name="viewport" content="width=540,user-scalable=no" />
+
     <title>테스트</title>
 </head>
 
 <body>
     <div id="wrapper">
-        <aside id="complete-pop"><img src="../src/img/finish_pop.png" alt=""></aside>
-
-        <aside id="entry-pop">
-            <input type="text" placeholder="성명" name="name" id="name" autocomplete="off">
-            <input type="tel" placeholder="휴대폰" name="phone" id="phone" maxlength="13" autocomplete="off">
-            <button id="entry-ok"></button>
-            <button id="entry-cancel"></button>
-            <img src="../src/img/input.png" alt="">
-        </aside>
-
-        <section id="section">
-            <article id="contents" class='d-none'>
-                <div id="contents-close-btn"></div>
-                <img src="../src/img/page1_bg.png" alt="" class="content_bg">
-                <img src="../src/img/eventRead.png" alt="" class="read_event">
-                <div class="agree_wrap">
-                    <div class="arrow"></div>
-                    <div class="check_box"></div>
-                    <img src="../src/img/agreeDownText.png" alt="" class="agree_text">
-                </div>
-                <div class="entry t-center">
-                    <img src="../src/img/enter_btn.png" alt="" class="entry-btn">
-                    <img src="../src/img/back_btn.png" alt="" class="other-view-btn">
-                </div>
-            </article>
-            <article class="swiper-container">
+        <nav id="navs">
+            <ul>
+                <li id="benefit" data-countTitle="나만의 혜택" data-countPart='1'></li>
+                <li id="reward" data-countTitle="리워드" data-countPart='2'></li>
+                <li id="shopping" data-countTitle="쇼핑뉴스" data-countPart='3'></li>
+                <li id="coupon" data-countTitle="쿠폰" data-countPart='4'></li>
+                <li id="culture" data-countTitle="컬쳐문화" data-countPart='5'></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="../src/img/1.png" alt="">
+                        <div id="player"></div>
+                        <img src="../src/images/benefit_img.png" alt="" class="active_height">
+                        <div class="cover"></div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="../src/img/2.png" alt="">
+                        <div id="player2"></div>
+                        <img src="../src/images/reward_img.png" alt="" class="active_height">
                     </div>
                     <div class="swiper-slide">
-                        <img src="../src/img/3.png" alt="">
+                        <ul class="shopping-btns">
+                            <li>
+                                <div class="shopping-btn1 btns" data-countTitle="쇼핑뉴스1" data-countPart='1'></div>
+                                <div class="shopping1-content d-none"></div>
+                            </li>
+                            <li>
+                                <div class="shopping-btn2 btns" data-countTitle="쇼핑뉴스2" data-countPart='2'></div>
+                                <div class="shopping2-content d-none"></div>
+                            </li>
+                        </ul>
+                        <div class="cover"></div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="../src/img/4.png" alt="">
+                        <ul class="coupon-btn">
+                            <li>
+                                <div class="coupon-btn1 btns" data-countTitle="쿠폰1" data-countPart='3'></div>
+                                <div class="coupon1-content d-none"></div>
+                            </li>
+                            <li>
+                                <div class="coupon-btn2 btns" data-countTitle="쿠폰2" data-countPart='4'></div>
+                                <div class="coupon2-content d-none"></div>
+                            </li>
+                            <li>
+                                <div class="coupon-btn3 btns" data-countTitle="쿠폰3" data-countPart='5'></div>
+                                <div class="coupon3-content d-none"></div>
+                            </li>
+                        </ul>
+                        <div class="cover"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <ul class="culture-btn">
+                            <li>
+                                <div class="culture-btn1 btns" data-countTitle="컬쳐문화1" data-countPart='6'></div>
+                                <div class="culture1-content d-none"></div>
+                            </li>
+                            <li>
+                                <div class="culture-btn2 btns" data-countTitle="컬쳐문화2" data-countPart='7'></div>
+                                <div class="culture2-content d-none"></div>
+                            </li>
+                        </ul>
+                        <div class="cover"></div>
                     </div>
                 </div>
-            </article>
+            </div>
         </section>
-
-        <div id="cover"></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
