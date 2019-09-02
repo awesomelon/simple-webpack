@@ -69,7 +69,7 @@ module.exports = {
         new HtmlWebPackPlugin({
             title: 'webpack test',
             template: './public/index.html',
-            favicon: './public/favicon.png',
+            favicon: './public/favicon.ico',
             minify: {
                 removeComments: true,
                 collapseWhitespace: false

@@ -3,91 +3,65 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
-    <meta name="viewport" content="width=540,user-scalable=no" />
-
-    <title>테스트</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=540,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>유니세프 댓글 테스트</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
 </head>
 
 <body>
     <div id="wrapper">
-        <nav id="navs">
-            <ul>
-                <li id="benefit" data-countTitle="나만의 혜택" data-countPart='1'></li>
-                <li id="reward" data-countTitle="리워드" data-countPart='2'></li>
-                <li id="shopping" data-countTitle="쇼핑뉴스" data-countPart='3'></li>
-                <li id="coupon" data-countTitle="쿠폰" data-countPart='4'></li>
-                <li id="culture" data-countTitle="컬쳐문화" data-countPart='5'></li>
-            </ul>
-        </nav>
-        <section>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="thumbs" id="thumbs1">
-                            <img src="../src/images/youtube.png" alt="" class="youtube-btn">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div><!-- <header>상단</header> -->
+        <div id="upload-form">
+            <button id="close-form">닫기</button>
+            <form method="POST" enctype="multipart/form-data" id="form">
+                <div class="swiper-container swiper-no-swiping">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="height-check">
+                                <div id="gallery-call" class="call-btn">사진업로드</div><input type="file" id="gallery"
+                                    class="files" name="bf_file[]" accept="image/*">
+                                <div style="width:540px; height:1000px; background-color: #000;"></div>
+                            </div>
                         </div>
-                        <div id="player"></div>
-                        <img src="../src/images/benefit_img.png" alt="" class="active_height">
-                        <div class="cover"></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="thumbs" id="thumbs2">
-                            <img src="../src/images/youtube.png" alt="" class="youtube-btn">
+                        <div class="swiper-slide">
+                            <div class="height-check"><button class="slideNext-btn">다음</button>
+                                <div id="big-thumb" class="thumb"></div>
+                                <div id="reGallery-btn">재업로드</div>
+                            </div>
                         </div>
-                        <div id="player2"></div>
-                        <img src="../src/images/reward_img.png" alt="" class="active_height">
-                    </div>
-                    <div class="swiper-slide">
-                        <ul class="shopping-btns">
-                            <li>
-                                <div class="shopping-btn1 btns" data-countTitle="쇼핑뉴스1" data-countPart='1'></div>
-                                <div class="shopping1-content d-none"></div>
-                            </li>
-                            <li>
-                                <div class="shopping-btn2 btns" data-countTitle="쇼핑뉴스2" data-countPart='2'></div>
-                                <div class="shopping2-content d-none"></div>
-                            </li>
-                        </ul>
-                        <div class="cover"></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <ul class="coupon-btn">
-                            <li>
-                                <div class="coupon-btn1 btns" data-countTitle="쿠폰1" data-countPart='3'></div>
-                                <div class="coupon1-content d-none"></div>
-                            </li>
-                            <li>
-                                <div class="coupon-btn2 btns" data-countTitle="쿠폰2" data-countPart='4'></div>
-                                <div class="coupon2-content d-none"></div>
-                            </li>
-                            <li>
-                                <div class="coupon-btn3 btns" data-countTitle="쿠폰3" data-countPart='5'></div>
-                                <div class="coupon3-content d-none"></div>
-                            </li>
-                        </ul>
-                        <div class="cover"></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <ul class="culture-btn">
-                            <li>
-                                <div class="culture-btn1 btns" data-countTitle="컬쳐문화1" data-countPart='6'></div>
-                                <div class="culture1-content d-none"></div>
-                            </li>
-                            <li>
-                                <div class="culture-btn2 btns" data-countTitle="컬쳐문화2" data-countPart='7'></div>
-                                <div class="culture2-content d-none"></div>
-                            </li>
-                        </ul>
-                        <div class="cover"></div>
+                        <div class="swiper-slide">
+                            <div class="height-check">
+                                <div id="small-thumb" class="thumb"></div>
+                                <div id="user-info-wrap"><input type="text" id="name" name="GameID" placeholder="작성자 이름"
+                                        class="user-info"> <input type="tel" id="birth" name="birth" placeholder="생년월일"
+                                        maxlength="10" class="user-info"> <input type="tel" id="phone" name="phone"
+                                        placeholder="전화번호" maxlength="13" class="user-info"> <input type="email"
+                                        id="subject" name="subject" placeholder="이메일" class="user-info"> <textarea
+                                        name="content" id="content" class="user-info" cols="30" rows="10"></textarea>
+                                </div><input type="submit" value="글 작성" id="submit">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </form>
+        </div>
+        <footer>
+            <!-- <p>D-000</p> --> <button id="list-btn">참여 현황</button> <button id="upload-btn">업로드하기</button></footer>
     </div>
+    <div id="list-wrap">
+        <ul class="list"></ul>
+        <ul class="paging"></ul>
+    </div>
+    <div id="detail"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    </script>
 </body>
 
 </html>

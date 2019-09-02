@@ -36,6 +36,7 @@
         "@babel/register": "^7.4.4",
         "@babel/runtime": "^7.4.5",
         "@babel/runtime-corejs3": "^7.4.5",
+        "blueimp-load-image": "^2.24.0",
         "browserslist": "^4.6.6",
         "core-js": "3",
         "core-js-pure": "^3.1.3",
