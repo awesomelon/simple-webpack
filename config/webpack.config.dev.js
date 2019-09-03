@@ -6,7 +6,7 @@ const path = require('path'),
 module.exports = {
     entry: ['./src/index.js'],
     output: {
-        filename: 'bundle.js',
+        filename: 'static/bundle.js',
         path: path.resolve(__dirname + '../build')
     },
     mode: 'development',
@@ -60,7 +60,7 @@ module.exports = {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 loader: 'file-loader',
                 options: {
-                    outputPath: 'images'
+                    outputPath: 'static/images'
                 }
             }
         ]
@@ -78,7 +78,7 @@ module.exports = {
         }),
 
         new MiniCssExtractPlugin({
-            filename: 'style.css'
+            filename: 'static/style.css'
         }),
 
         new CleanWebpackPlugin()

@@ -9,7 +9,7 @@ const path = require('path'),
 module.exports = {
     entry: ['./src/index.js'],
     output: {
-        filename: 'bundle.[contenthash].js',
+        filename: 'static/bundle.[contenthash].js',
         path: path.resolve('build')
     },
     mode: 'production',
@@ -58,7 +58,7 @@ module.exports = {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 loader: 'file-loader',
                 options: {
-                    outputPath: 'images'
+                    outputPath: 'static/images'
                 }
             }
         ]
@@ -84,7 +84,7 @@ module.exports = {
         }),
 
         new MiniCssExtractPlugin({
-            filename: 'style.[contenthash].css'
+            filename: 'static/style.[contenthash].css'
         }),
 
         new ImageminPlugin({
