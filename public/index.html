@@ -24,8 +24,8 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="height-check">
-                                <div id="gallery-call" class="call-btn">사진업로드</div><input type="file" id="gallery"
-                                    class="files" name="bf_file[]" accept="image/*">
+                                <div id="gallery-call" class="call-btn">사진업로드</div>
+                                <input type="file" id="gallery" class="files" name="bf_file[]" accept="image/*" />
                                 <div style="width:540px; height:1000px; background-color: #000;"></div>
                             </div>
                         </div>
@@ -38,18 +38,13 @@
                         <div class="swiper-slide">
                             <div class="height-check">
                                 <div id="small-thumb" class="thumb"></div>
-                                <div id="user-info-wrap">
-                                    <input type="text" id="name" name="GameID" placeholder="작성자 이름" class="user-info">
-                                    <input type="tel" id="birth" name="birth" placeholder="생년월일" maxlength="10"
-                                        class="user-info" />
-                                    <input type="tel" id="phone" name="phone" placeholder="전화번호" maxlength="13"
-                                        class="user-info" />
-                                    <input type="email" id="subject" name="subject" placeholder="이메일"
-                                        class="user-info" />
-                                    <textarea name="content" id="content" class="user-info" cols="30" rows="10">
-                                    </textarea>
-                                </div>
-                                <input type="submit" value="글 작성" id="submit" />
+                                <div id="user-info-wrap"><input type="text" id="name" name="GameID" placeholder="작성자 이름"
+                                        class="user-info"> <input type="tel" id="birth" name="birth" placeholder="생년월일"
+                                        maxlength="10" class="user-info"> <input type="tel" id="phone" name="phone"
+                                        placeholder="전화번호" maxlength="13" class="user-info"> <input type="email"
+                                        id="subject" name="subject" placeholder="이메일" class="user-info"> <textarea
+                                        name="content" id="content" class="user-info" cols="30" rows="10"></textarea>
+                                </div><input type="submit" value="글 작성" id="submit">
                             </div>
                         </div>
                     </div>
@@ -57,17 +52,13 @@
             </form>
         </div>
         <footer>
-            <button id="list-btn">참여 현황</button>
-            <button id="upload-btn">업로드하기</button>
-        </footer>
+            <!-- <p>D-000</p> --> <button id="list-btn">참여 현황</button> <button id="upload-btn">업로드하기</button></footer>
     </div>
     <div id="list-wrap">
         <ul class="list"></ul>
         <ul class="paging"></ul>
     </div>
-
     <div id="detail"></div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
 </body>
 

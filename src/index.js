@@ -1,7 +1,6 @@
 import './reset.css';
 import 'swiper/dist/css/swiper.min.css';
 import './app.css';
-
 import UploadEv from './js/uploadData';
 import RegEv from './js/RegEv';
 import ListData from './js/listData';
