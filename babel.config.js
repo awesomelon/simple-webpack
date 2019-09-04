@@ -22,6 +22,9 @@ module.exports = function(api) {
     ].filter(Boolean);
 
     const plugins = [
+        '@babel/plugin-proposal-export-namespace-from',
+        '@babel/plugin-proposal-numeric-separator',
+        '@babel/plugin-transform-modules-commonjs',
         '@babel/plugin-syntax-dynamic-import',
         '@babel/plugin-proposal-class-properties',
         '@babel/plugin-proposal-object-rest-spread',
