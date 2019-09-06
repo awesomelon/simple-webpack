@@ -10,6 +10,8 @@
     js
     css
     image
+    
+    index.js
 
 
 # build
