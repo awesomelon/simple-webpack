@@ -3,28 +3,28 @@
 심플하게 쓸 웹팩 세팅
 
 # public
-     index.html, 
+     ㄴindex.html, 
      favicon.ico
 
 # src
-    js
-    css
-    image
+    ㄴjs
+    ㄴcss
+    ㄴimage
     
-    index.js
+    ㄴindex.js
 
 
 # build
-     static
-       css
-        bundle.css
+     ㄴstatic
+       ㄴcss
+        ㄴbundle.css
         
-       js
-        bundle.js
+       ㄴjs
+        ㄴbundle.js
         
-       images
-        .png
+       ㄴimages
+        ㄴ.png
 
-    index.html
-    favicon.ico
+    ㄴindex.html
+    ㄴfavicon.ico
 
