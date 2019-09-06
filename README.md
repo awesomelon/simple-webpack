@@ -2,12 +2,12 @@
 
 심플하게 쓸 웹팩 세팅
 
-#public -> index.html, favicon.ico
+# public -> index.html, favicon.ico
 
-#src -> js,css,image
+# src -> js,css,image
 
 
-#build -> {
+# build -> {
   static -> {
     css/bundle.css
     js/bundle.js
