@@ -106,7 +106,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebPackPlugin({
-            title: '배포용',
+            title: '유니세프',
             template: './public/index.ejs',
             favicon: './public/favicon.ico',
             minify: {
