@@ -106,8 +106,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebPackPlugin({
-            title: '유니세프',
-            template: './public/index.ejs',
+            template: './public/index.html',
             favicon: './public/favicon.ico',
             minify: {
                 removeComments: true,

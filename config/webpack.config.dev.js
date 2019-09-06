@@ -102,8 +102,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebPackPlugin({
-            title: '개발서버용',
-            template: './public/index.ejs',
+            template: './public/index.html',
             favicon: './public/favicon.ico',
             filename: 'index.html'
         }),
