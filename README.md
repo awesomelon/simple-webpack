@@ -18,8 +18,10 @@
      static
        css
         bundle.css
+        
        js
         bundle.js
+        
        images
         .png
 
