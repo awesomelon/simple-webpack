@@ -3,7 +3,7 @@
 심플하게 쓸 웹팩 세팅
 
 # public
-     └ index.html, 
+     └ index.ejs, 
      └ favicon.ico
 
 # src
