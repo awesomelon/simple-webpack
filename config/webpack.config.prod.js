@@ -117,7 +117,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebPackPlugin({
-            title: 'webpack test',
+            title: '테스트',
             template: './public/index.html',
             favicon: './public/favicon.ico',
             minify: {
