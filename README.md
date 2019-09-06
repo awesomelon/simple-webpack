@@ -1,6 +1,6 @@
 # webpack-finalSetting
 
-심플하게 쓸 웹팩 세팅
+# simply use WEBPACK
 
 # public
      └ index.ejs, 
