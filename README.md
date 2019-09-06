@@ -1,6 +1,6 @@
 # webpack-finalSetting
 
-# simply use WEBPACK
+### simply use WEBPACK
 
 # public
      └ index.ejs, 
