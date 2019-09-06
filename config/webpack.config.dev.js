@@ -105,10 +105,6 @@ module.exports = {
             title: '개발서버용',
             template: './public/index.ejs',
             favicon: './public/favicon.ico',
-            minify: {
-                removeComments: true,
-                collapseWhitespace: true
-            },
             filename: 'index.html'
         }),
 
