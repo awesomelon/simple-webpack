@@ -26,17 +26,6 @@ module.exports = {
                 }
             },
             {
-                test: /\.html$/,
-                use: [
-                    {
-                        loader: 'html-loader',
-                        options: {
-                            minimize: true
-                        }
-                    }
-                ]
-            },
-            {
                 test: /\.css$/,
                 use: [
                     {
@@ -117,12 +106,12 @@ module.exports = {
     },
     plugins: [
         new HtmlWebPackPlugin({
-            title: '테스트',
-            template: './public/index.html',
+            title: '배포용',
+            template: './public/index.ejs',
             favicon: './public/favicon.ico',
             minify: {
                 removeComments: true,
-                collapseWhitespace: false
+                collapseWhitespace: true
             },
             filename: 'index.html'
         }),
