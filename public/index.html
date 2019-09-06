@@ -3,62 +3,61 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=540,user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>유니세프 댓글 테스트</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=540,user-scalable=no" />
+    <title>테스트</title>
 </head>
 
 <body>
     <div id="wrapper">
-        <div class="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div><!-- <header>상단</header> -->
-        <div id="upload-form">
-            <button id="close-form">닫기</button>
-            <form method="POST" enctype="multipart/form-data" id="form">
-                <div class="swiper-container swiper-no-swiping">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="height-check">
-                                <div id="gallery-call" class="call-btn">사진업로드</div>
-                                <input type="file" id="gallery" class="files" name="bf_file[]" accept="image/*" />
-                                <div style="width:540px; height:1000px; background-color: #000;"></div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="height-check"><button class="slideNext-btn">다음</button>
-                                <div id="big-thumb" class="thumb"></div>
-                                <div id="reGallery-btn">재업로드</div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="height-check">
-                                <div id="small-thumb" class="thumb"></div>
-                                <div id="user-info-wrap"><input type="text" id="name" name="GameID" placeholder="작성자 이름"
-                                        class="user-info"> <input type="tel" id="birth" name="birth" placeholder="생년월일"
-                                        maxlength="10" class="user-info"> <input type="tel" id="phone" name="phone"
-                                        placeholder="전화번호" maxlength="13" class="user-info"> <input type="email"
-                                        id="subject" name="subject" placeholder="이메일" class="user-info"> <textarea
-                                        name="content" id="content" class="user-info" cols="30" rows="10"></textarea>
-                                </div><input type="submit" value="글 작성" id="submit">
-                            </div>
-                        </div>
+        <aside id="complete-pop"><img src="../src/img/finish_pop.png" alt=""></aside>
+
+        <aside id="entry-pop">
+            <input type="text" placeholder="성명" name="name" id="name" autocomplete="off">
+            <input type="tel" placeholder="휴대폰" name="phone" id="phone" maxlength="13" autocomplete="off">
+            <button id="entry-ok"></button>
+            <button id="entry-cancel"></button>
+            <img src="../src/img/input.png" alt="">
+        </aside>
+
+        <section id="section">
+            <article id="contents" class='d-none'>
+                <div id="contents-close-btn"></div>
+                <img src="../src/img/page1_bg.png" alt="" class="content_bg">
+                <img src="../src/img/eventRead.png" alt="" class="read_event">
+                <div class="agree_wrap">
+                    <div class="arrow"></div>
+                    <div class="check_box"></div>
+                    <img src="../src/img/agreeDownText.png" alt="" class="agree_text">
+                </div>
+                <div class="entry t-center">
+                    <img src="../src/img/enter_btn.png" alt="" class="entry-btn">
+                    <img src="../src/img/back_btn.png" alt="" class="other-view-btn">
+                </div>
+            </article>
+            <article class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../src/img/1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../src/img/2.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../src/img/3.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../src/img/4.png" alt="">
                     </div>
                 </div>
-            </form>
-        </div>
-        <footer>
-            <!-- <p>D-000</p> --> <button id="list-btn">참여 현황</button> <button id="upload-btn">업로드하기</button></footer>
+            </article>
+        </section>
+
+        <div id="cover"></div>
     </div>
-    <div id="list-wrap">
-        <ul class="list"></ul>
-        <ul class="paging"></ul>
-    </div>
-    <div id="detail"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
 </body>
 
 </html>

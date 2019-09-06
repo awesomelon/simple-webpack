@@ -6,7 +6,7 @@ const path = require('path'),
 module.exports = {
     entry: ['./src/index.js'],
     output: {
-        filename: 'static/bundle.js',
+        filename: 'static/js/bundle.js',
         path: path.resolve(__dirname + '../build')
     },
     mode: 'development',
@@ -41,7 +41,12 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../../'
+                        }
+                    },
                     'css-loader',
                     {
                         loader: 'postcss-loader',
@@ -58,10 +63,27 @@ module.exports = {
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
-                loader: 'file-loader',
-                options: {
-                    outputPath: 'static/images'
-                }
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'static/images/',
+                            postTransformPublicPath: p => `__webpack_public_path__ + ${p}`
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'static/fonts/',
+                            postTransformPublicPath: p => `__webpack_public_path__ + ${p}`
+                        }
+                    }
+                ]
             }
         ]
     },
@@ -102,7 +124,7 @@ module.exports = {
         }),
 
         new MiniCssExtractPlugin({
-            filename: 'static/style.css'
+            filename: 'static/css/style.css'
         }),
 
         new CleanWebpackPlugin()

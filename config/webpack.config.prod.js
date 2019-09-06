@@ -9,7 +9,7 @@ const path = require('path'),
 module.exports = {
     entry: ['./src/index.js'],
     output: {
-        filename: 'static/bundle.[contenthash].js',
+        filename: 'static/js/bundle.[contenthash].js',
         path: path.resolve('build')
     },
     mode: 'production',
@@ -39,7 +39,12 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../../'
+                        }
+                    },
                     'css-loader',
                     {
                         loader: 'postcss-loader',
@@ -56,10 +61,19 @@ module.exports = {
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
-                loader: 'file-loader',
-                options: {
-                    outputPath: 'static/images'
-                }
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'static/images/',
+                            postTransformPublicPath: p => `__webpack_public_path__ + ${p}`
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                use: ['file-loader']
             }
         ]
     },
@@ -106,7 +120,7 @@ module.exports = {
         }),
 
         new MiniCssExtractPlugin({
-            filename: 'static/style.[contenthash].css'
+            filename: 'static/css/style.[contenthash].css'
         }),
 
         new ImageminPlugin({
