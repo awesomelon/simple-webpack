@@ -73,7 +73,15 @@ module.exports = {
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
-                use: ['file-loader']
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'static/fonts/',
+                            postTransformPublicPath: p => `__webpack_public_path__ + ${p}`
+                        }
+                    }
+                ]
             }
         ]
     },
