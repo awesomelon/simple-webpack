@@ -1,7 +1,7 @@
 {
-    "name": "webpack-setting2",
+    "name": "simply-webpack",
     "version": "1.0.0",
-    "description": "",
+    "description": "made in Bang",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
