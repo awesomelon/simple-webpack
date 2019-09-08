@@ -104,7 +104,7 @@ module.exports = {
         new HtmlWebPackPlugin({
             title: '배포용',
             template: './public/index.ejs',
-            // favicon: './public/favicon.ico',
+            favicon: './public/favicon.ico',
             minify: {
                 removeComments: true,
                 collapseWhitespace: true

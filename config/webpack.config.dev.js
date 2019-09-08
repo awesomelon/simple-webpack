@@ -100,7 +100,7 @@ module.exports = {
         new HtmlWebPackPlugin({
             title: '개발용',
             template: './public/index.ejs',
-            // favicon: './public/favicon.ico',
+            favicon: './public/favicon.ico',
             filename: 'index.html'
         }),
 
