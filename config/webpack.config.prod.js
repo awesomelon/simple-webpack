@@ -13,10 +13,13 @@ module.exports = {
         path: path.resolve('build')
     },
     mode: 'production',
+    resolve: {
+        extensions: ['.ts', '.js']
+    },
     module: {
         rules: [
             {
-                test: /\.js/,
+                test: /\.(js|ts)/,
                 exclude: /(node_modules|bower_components|node_modules\/(?!(dom7|ssr-window|swiper)\/).*)/,
                 use: {
                     loader: 'babel-loader',
