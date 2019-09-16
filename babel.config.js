@@ -18,8 +18,7 @@ module.exports = function(api) {
                 loose: true,
                 debug: true
             }
-        ],
-        '@babel/preset-typescript'
+        ]
     ].filter(Boolean);
 
     const plugins = [
