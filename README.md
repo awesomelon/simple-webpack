@@ -4,5 +4,5 @@
 
  run
 ==========================
-* yarn start || npm run start
-* yarn build  || npm run build
+* yarn start
+* yarn build
