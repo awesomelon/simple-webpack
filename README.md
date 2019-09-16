@@ -1,6 +1,5 @@
-# webpack-finalSetting
-
-### simply use WEBPACK
+ structure-frontend
+==========================
 
 # public
      └ index.ejs, 
