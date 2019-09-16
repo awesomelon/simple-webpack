@@ -1,5 +1,6 @@
  structure-frontend
 ==========================
+* front-end 개발을 위한 기본 개발 환경 셋팅
 
 # public
      └ index.ejs, 
