@@ -61,5 +61,5 @@
         "ts-loader": "^6.1.0",
         "typescript": "^3.6.3"
     },
-    "repository": "https://github.com/awesomelon/webpack-finalSetting.git"
+    "repository": "https://github.com/awesomelon/structure-frontend.git"
 }
