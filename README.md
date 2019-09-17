@@ -8,7 +8,8 @@
    * window 10
    * visual studio code
    * node v10.16.3
-   * npm 6.9.0
+   * npm v6.9.0
+   * yarn v1.17.3
 
  실행
 ==========================
