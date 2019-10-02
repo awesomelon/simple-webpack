@@ -19,11 +19,11 @@ history
 
 usage
 ==========================
-```npm install
-yarn install
-```
+```npm install```
+```yarn install```
+
 
 run
 ==========================
-yarn start(dev server)
-yarn build(product)
+* yarn start(dev server)
+* yarn build(product)
