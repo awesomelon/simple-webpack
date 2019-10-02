@@ -2,23 +2,26 @@
 ==========================
 * **프레임워크없이** 셋팅해보는 front-end 개발 환경
 
-구조
+environment
 ==========================
-* 환경
-   * window 10
-   * visual studio code
-   * node v10.16.3
-   * npm v6.9.0
-   * yarn v1.17.3
+* window 10
+* visual studio code
+* node v10.16.3
+* npm v6.9.0
+* yarn v1.17.3
 
-수정사항
+history
 ==========================
 * 19.09.12
    * 타입스크립트 환경 추가
 * 19.09.07
    * scss 환경 추가
 
- 실행
+usage
+==========================
+npm install or yarn install
+
+run
 ==========================
 * yarn start
 * yarn build
