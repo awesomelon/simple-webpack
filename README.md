@@ -20,7 +20,8 @@ history
 usage
 ==========================
 ```npm install
-yarn install```
+yarn install
+```
 
 run
 ==========================
