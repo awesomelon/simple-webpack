@@ -26,5 +26,5 @@ or
 
 run
 ==========================
-* yarn start(dev server)
-* yarn build(product)
+```yarn start(dev server)```
+```yarn build(product)```
