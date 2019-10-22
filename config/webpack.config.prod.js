@@ -76,7 +76,7 @@ module.exports = {
     optimization: {
         splitChunks: {
             chunks: 'all',
-            name: false
+            name: true
         },
         minimizer: [
             new TerserPlugin({
