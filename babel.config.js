@@ -12,9 +12,6 @@ module.exports = function(api) {
             {
                 useBuiltIns: 'usage',
                 corejs: { version: 3, proposals: true },
-                targets: {
-                    browsers: ['last 2 version', 'ie >= 10']
-                },
                 loose: true,
                 debug: true
             }
