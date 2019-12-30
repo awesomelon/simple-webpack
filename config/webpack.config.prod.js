@@ -1,3 +1,5 @@
+/** @format */
+
 const path = require('path'),
 	HtmlWebPackPlugin = require('html-webpack-plugin'),
 	MiniCssExtractPlugin = require('mini-css-extract-plugin'),
@@ -7,7 +9,7 @@ const path = require('path'),
 	OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
-	entry: ['./src/index.js'],
+	entry: ['./src/index.ts'],
 	output: {
 		filename: 'static/js/bundle.[contenthash].js',
 		path: path.resolve('build')
