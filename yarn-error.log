@@ -1,97 +1,96 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add can-jajx
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add libpng-dev
 
 PATH: 
-  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\pc\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn\bin;C:\Ruby25-x64\bin;C:\Ruby24-x64\bin;C:\Program Files\Bandizip;C:\Program Files\Microsoft VS Code\bin;C:\Users\pc\AppData\Roaming\npm;C:\Users\pc\AppData\Local\Yarn\bin;C:\Users\pc\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\heroku\bin
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\aweso\bin;C:\Program Files (x86)\NAT Service;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn\bin;C:\Program Files\Git\cmd;C:\Users\aweso\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip;C:\Users\aweso\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\aweso\AppData\Roaming\npm;C:\Users\aweso\AppData\Local\Yarn\bin
 
 Yarn version: 
-  1.13.0
+  1.21.1
 
 Node version: 
-  10.15.0
+  12.13.1
 
 Platform: 
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/can-jajx: Not found
-      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:65364:18)
-      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:129397:22)
-      at Request.emit (events.js:182:13)
-      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:130369:10)
-      at Request.emit (events.js:182:13)
-      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:130291:12)
-      at Object.onceWrapper (events.js:273:13)
-      at IncomingMessage.emit (events.js:187:15)
-      at endReadableNT (_stream_readable.js:1094:12)
-      at process._tickCallback (internal/process/next_tick.js:63:19)
+  Error: https://registry.yarnpkg.com/libpng-dev: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66056:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140665:22)
+      at Request.emit (events.js:210:5)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141637:10)
+      at Request.emit (events.js:210:5)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141559:12)
+      at Object.onceWrapper (events.js:299:28)
+      at IncomingMessage.emit (events.js:215:7)
+      at endReadableNT (_stream_readable.js:1184:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
 
 npm manifest: 
   {
-      "name": "webpack-setting2",
-      "version": "1.0.0",
-      "description": "",
-      "main": "index.js",
-      "scripts": {
-          "test": "echo \"Error: no test specified\" && exit 1",
-          "start": "webpack-dev-server --config ./config/webpack.config.dev --hot --open",
-          "build": "webpack --config ./config/webpack.config.prod"
-      },
-      "keywords": [],
-      "author": "awesomelon <awesomelon@naver.com>",
-      "license": "MIT",
-      "devDependencies": {
-          "@babel/cli": "^7.2.3",
-          "@babel/core": "^7.4.5",
-          "@babel/eslint-plugin-development": "^1.0.1",
-          "@babel/plugin-proposal-class-properties": "^7.4.4",
-          "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
-          "@babel/plugin-proposal-numeric-separator": "^7.2.0",
-          "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
-          "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-          "@babel/plugin-transform-modules-commonjs": "^7.4.4",
-          "@babel/plugin-transform-runtime": "^7.4.4",
-          "@babel/preset-env": "^7.4.5",
-          "@babel/preset-flow": "^7.0.0",
-          "@babel/register": "^7.4.4",
-          "@babel/runtime": "^7.4.5",
-          "@babel/runtime-corejs3": "^7.4.5",
-          "autoprefixer": "^9.5.1",
-          "babel-eslint": "^11.0.0-beta.0",
-          "babel-jest": "^24.8.0",
-          "babel-loader": "^8.0.6",
-          "babel-plugin-transform-charcodes": "^0.2.0",
-          "clean-webpack-plugin": "^2.0.2",
-          "css-loader": "^2.1.1",
-          "file-loader": "^3.0.1",
-          "html-loader": "^0.5.5",
-          "html-webpack-plugin": "^3.2.0",
-          "mini-css-extract-plugin": "^0.7.0",
-          "node-sass": "^4.12.0",
-          "postcss-loader": "^3.0.0",
-          "sass-loader": "^7.1.0",
-          "style-loader": "^0.23.1",
-          "webpack": "^4.32.2",
-          "webpack-cli": "^3.3.2",
-          "webpack-dev-server": "^3.4.1"
-      },
-      "dependencies": {
-          "blueimp-load-image": "^2.24.0",
-          "browserslist": "^4.6.6",
-          "core-js": "3",
-          "core-js-pure": "^3.1.3",
-          "dom7": "^2.1.3",
-          "gsap": "^2.1.3",
-          "imagemin-webpack-plugin": "^2.4.2",
-          "jquery": "^3.4.1",
-          "optimize-css-assets-webpack-plugin": "^5.0.3",
-          "pngquant-bin": "^5.0.2",
-          "regenerator": "^0.14.1",
-          "regenerator-runtime": "^0.13.2",
-          "ssr-window": "^1.0.1",
-          "swiper": "^4.5.0"
-      },
-      "repository": "https://github.com/awesomelon/webpack-finalSetting.git"
+  	"name": "simply-webpack",
+  	"version": "1.0.0",
+  	"description": "Bang JaeHo",
+  	"main": "index.js",
+  	"scripts": {
+  		"test": "echo \"Error: no test specified\" && exit 1",
+  		"start": "webpack-dev-server --config ./config/webpack.config.dev --hot --open",
+  		"build": "webpack --config ./config/webpack.config.prod"
+  	},
+  	"keywords": [],
+  	"author": "awesomelon <awesomelon@naver.com>",
+  	"license": "MIT",
+  	"devDependencies": {
+  		"@babel/cli": "^7.2.3",
+  		"@babel/core": "^7.4.5",
+  		"@babel/eslint-plugin-development": "^1.0.1",
+  		"@babel/plugin-proposal-class-properties": "^7.4.4",
+  		"@babel/plugin-proposal-export-namespace-from": "^7.2.0",
+  		"@babel/plugin-proposal-numeric-separator": "^7.2.0",
+  		"@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+  		"@babel/plugin-syntax-dynamic-import": "^7.2.0",
+  		"@babel/plugin-transform-modules-commonjs": "^7.4.4",
+  		"@babel/plugin-transform-runtime": "^7.4.4",
+  		"@babel/preset-env": "^7.4.5",
+  		"@babel/preset-flow": "^7.0.0",
+  		"@babel/preset-typescript": "7.7.4",
+  		"@babel/register": "^7.4.4",
+  		"@babel/runtime": "^7.4.5",
+  		"@babel/runtime-corejs3": "^7.4.5",
+  		"autoprefixer": "^9.5.1",
+  		"babel-eslint": "^11.0.0-beta.0",
+  		"babel-jest": "^24.8.0",
+  		"babel-loader": "^8.0.6",
+  		"babel-plugin-transform-charcodes": "^0.2.0",
+  		"clean-webpack-plugin": "^2.0.2",
+  		"css-loader": "^2.1.1",
+  		"file-loader": "^3.0.1",
+  		"html-loader": "^0.5.5",
+  		"html-webpack-plugin": "^3.2.0",
+  		"mini-css-extract-plugin": "^0.7.0",
+  		"node-sass": "^4.12.0",
+  		"postcss-loader": "^3.0.0",
+  		"sass-loader": "^7.1.0",
+  		"style-loader": "^0.23.1",
+  		"webpack": "^4.32.2",
+  		"webpack-cli": "^3.3.2",
+  		"webpack-dev-server": "^3.4.1"
+  	},
+  	"dependencies": {
+  		"browserslist": "^4.6.6",
+  		"core-js": "3",
+  		"core-js-pure": "^3.1.3",
+  		"dom7": "^2.1.3",
+  		"imagemin-webpack-plugin": "^2.4.2",
+  		"optimize-css-assets-webpack-plugin": "^5.0.3",
+  		"pngquant-bin": "^5.0.2",
+  		"regenerator": "^0.14.1",
+  		"regenerator-runtime": "^0.13.2",
+  		"ssr-window": "^1.0.1",
+  		"ts-loader": "^6.2.1",
+  		"typescript": "^3.7.3"
+  	},
+  	"repository": "https://github.com/awesomelon/structure-frontend.git"
   }
 
 yarn manifest: 
@@ -190,6 +189,18 @@ Lockfile:
     version "7.5.5"
     resolved "https://registry.yarnpkg.com/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.5.5.tgz#401f302c8ddbc0edd36f7c6b2887d8fa1122e5a4"
     integrity sha512-ZsxkyYiRA7Bg+ZTRpPvB6AbOFKTFFK4LrvTet8lInm0V468MWCaSYJE+I7v2z2r8KNLtYiV+K5kTCnR7dvyZjg==
+    dependencies:
+      "@babel/helper-function-name" "^7.1.0"
+      "@babel/helper-member-expression-to-functions" "^7.5.5"
+      "@babel/helper-optimise-call-expression" "^7.0.0"
+      "@babel/helper-plugin-utils" "^7.0.0"
+      "@babel/helper-replace-supers" "^7.5.5"
+      "@babel/helper-split-export-declaration" "^7.4.4"
+  
+  "@babel/helper-create-class-features-plugin@^7.6.0":
+    version "7.6.0"
+    resolved "https://registry.yarnpkg.com/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.6.0.tgz#769711acca889be371e9bc2eb68641d55218021f"
+    integrity sha512-O1QWBko4fzGju6VoVvrZg0RROCVifcLxiApnGP3OWfWzvxRZFCoBD81K5ur5e3bVY2Vf/5rIJm8cqPKn8HUJng==
     dependencies:
       "@babel/helper-function-name" "^7.1.0"
       "@babel/helper-member-expression-to-functions" "^7.5.5"
@@ -498,6 +509,13 @@ Lockfile:
     dependencies:
       "@babel/helper-plugin-utils" "^7.0.0"
   
+  "@babel/plugin-syntax-typescript@^7.2.0":
+    version "7.3.3"
+    resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-typescript/-/plugin-syntax-typescript-7.3.3.tgz#a7cc3f66119a9f7ebe2de5383cce193473d65991"
+    integrity sha512-dGwbSMA1YhVS8+31CnPR7LB4pcbrzcV99wQzby4uAfrkZPYZlQ7ImwdpzLqi6Z6IL02b8IAL379CaMwo0x5Lag==
+    dependencies:
+      "@babel/helper-plugin-utils" "^7.0.0"
+  
   "@babel/plugin-transform-arrow-functions@^7.2.0":
     version "7.2.0"
     resolved "https://registry.yarnpkg.com/@babel/plugin-transform-arrow-functions/-/plugin-transform-arrow-functions-7.2.0.tgz#9aeafbe4d6ffc6563bf8f8372091628f00779550"
@@ -753,6 +771,15 @@ Lockfile:
     dependencies:
       "@babel/helper-plugin-utils" "^7.0.0"
   
+  "@babel/plugin-transform-typescript@^7.6.0":
+    version "7.6.0"
+    resolved "https://registry.yarnpkg.com/@babel/plugin-transform-typescript/-/plugin-transform-typescript-7.6.0.tgz#48d78405f1aa856ebeea7288a48a19ed8da377a6"
+    integrity sha512-yzw7EopOOr6saONZ3KA3lpizKnWRTe+rfBqg4AmQbSow7ik7fqmzrfIqt053osLwLE2AaTqGinLM2tl6+M/uog==
+    dependencies:
+      "@babel/helper-create-class-features-plugin" "^7.6.0"
+      "@babel/helper-plugin-utils" "^7.0.0"
+      "@babel/plugin-syntax-typescript" "^7.2.0"
+  
   "@babel/plugin-transform-unicode-regex@^7.4.4":
     version "7.4.4"
     resolved "https://registry.yarnpkg.com/@babel/plugin-transform-unicode-regex/-/plugin-transform-unicode-regex-7.4.4.tgz#ab4634bb4f14d36728bf5978322b35587787970f"
@@ -825,6 +852,14 @@ Lockfile:
     dependencies:
       "@babel/helper-plugin-utils" "^7.0.0"
       "@babel/plugin-transform-flow-strip-types" "^7.0.0"
+  
+  "@babel/preset-typescript@^7.6.0":
+    version "7.6.0"
+    resolved "https://registry.yarnpkg.com/@babel/preset-typescript/-/preset-typescript-7.6.0.tgz#25768cb8830280baf47c45ab1a519a9977498c98"
+    integrity sha512-4xKw3tTcCm0qApyT6PqM9qniseCE79xGHiUnNdKGdxNsGUc2X7WwZybqIpnTmoukg3nhPceI5KPNzNqLNeIJww==
+    dependencies:
+      "@babel/helper-plugin-utils" "^7.0.0"
+      "@babel/plugin-transform-typescript" "^7.6.0"
   
   "@babel/register@^7.4.4":
     version "7.5.5"
@@ -1785,11 +1820,6 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.5.tgz#a8d0afd73251effbbd5fe384a77d73003c17a71f"
     integrity sha512-5am6HnnfN+urzt4yfg7IgTbotDjIT/u8AJpEt0sIU9FtXfVeezXAPKswrG+xKUCOYAINpSdgZVDU6QFh+cuH3w==
   
-  blueimp-load-image@^2.24.0:
-    version "2.24.0"
-    resolved "https://registry.yarnpkg.com/blueimp-load-image/-/blueimp-load-image-2.24.0.tgz#ced5b78fc9b32b4743fc4f780d3305d56391f04f"
-    integrity sha512-fR/CNGEOqbcgbQC7+6hJKcxjD5updapWECbptrHrYpkacP1eXCOoA+92D0v49Sc+gwtxTDzu8nxNmYYd7AXzUg==
-  
   bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
     version "4.11.8"
     resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.8.tgz#2cde09eb5ee341f484746bb0309b3253b1b1442f"
@@ -1851,6 +1881,13 @@ Lockfile:
       snapdragon-node "^2.0.1"
       split-string "^3.0.2"
       to-regex "^3.0.1"
+  
+  braces@^3.0.1:
+    version "3.0.2"
+    resolved "https://registry.yarnpkg.com/braces/-/braces-3.0.2.tgz#3454e1a462ee8d599e236df336cd9ea4f8afe107"
+    integrity sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==
+    dependencies:
+      fill-range "^7.0.1"
   
   brorand@^1.0.1:
     version "1.1.0"
@@ -2147,7 +2184,7 @@ Lockfile:
       tunnel-agent "^0.6.0"
       url-to-options "^1.0.1"
   
-  chalk@2.4.2, chalk@^2.0.0, chalk@^2.0.1, chalk@^2.4.1, chalk@^2.4.2:
+  chalk@2.4.2, chalk@^2.0.0, chalk@^2.0.1, chalk@^2.3.0, chalk@^2.4.1, chalk@^2.4.2:
     version "2.4.2"
     resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
     integrity sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==
@@ -3218,7 +3255,7 @@ Lockfile:
     dependencies:
       once "^1.4.0"
   
-  enhanced-resolve@4.1.0, enhanced-resolve@^4.1.0:
+  enhanced-resolve@4.1.0, enhanced-resolve@^4.0.0, enhanced-resolve@^4.1.0:
     version "4.1.0"
     resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-4.1.0.tgz#41c7e0bfdfe74ac1ffe1e57ad6a5c6c9f3742a7f"
     integrity sha512-F/7vkyTtyc/llOIn8oWclcB25KdRaiPBpZYDgJHgh/UHtpgT2p2eldQgtQnLtUvfMKPKxbRaQM/hHkvLHt1Vng==
@@ -3670,6 +3707,13 @@ Lockfile:
       repeat-string "^1.6.1"
       to-regex-range "^2.1.0"
   
+  fill-range@^7.0.1:
+    version "7.0.1"
+    resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-7.0.1.tgz#1919a6a7c75fe38b2c7c77e5198535da9acdda40"
+    integrity sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==
+    dependencies:
+      to-regex-range "^5.0.1"
+  
   finalhandler@~1.1.2:
     version "1.1.2"
     resolved "https://registry.yarnpkg.com/finalhandler/-/finalhandler-1.1.2.tgz#b7e7d000ffd11938d0fdb053506f6ebabe9f587d"
@@ -4098,11 +4142,6 @@ Lockfile:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
     integrity sha1-TK+tdrxi8C+gObL5Tpo906ORpyU=
-  
-  gsap@^2.1.3:
-    version "2.1.3"
-    resolved "https://registry.yarnpkg.com/gsap/-/gsap-2.1.3.tgz#c63ee3a50f0b7dc3b46ed0845bb0f09049feb944"
-    integrity sha512-8RFASCqi2FOCBuv7X4o7M6bLdy+1hbR0azg+MG7zz+EVsI+OmJblYsTk0GEepQd2Jg/ItMPiVTibF7r3EVxjZQ==
   
   handle-thing@^2.0.0:
     version "2.0.0"
@@ -4846,6 +4885,11 @@ Lockfile:
     dependencies:
       kind-of "^3.0.2"
   
+  is-number@^7.0.0:
+    version "7.0.0"
+    resolved "https://registry.yarnpkg.com/is-number/-/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
+    integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
+  
   is-obj@^1.0.0:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/is-obj/-/is-obj-1.0.1.tgz#3e4729ac1f5fde025cd7d83a896dab9f4f67db0f"
@@ -5085,11 +5129,6 @@ Lockfile:
       bin-build "^3.0.0"
       bin-wrapper "^4.0.0"
       logalot "^2.0.0"
-  
-  jquery@^3.4.1:
-    version "3.4.1"
-    resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
-    integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
   
   js-base64@^2.1.8:
     version "2.5.1"
@@ -5548,6 +5587,14 @@ Lockfile:
       regex-not "^1.0.0"
       snapdragon "^0.8.1"
       to-regex "^3.0.2"
+  
+  micromatch@^4.0.0:
+    version "4.0.2"
+    resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-4.0.2.tgz#4fcb0999bf9fbc2fcbdd212f6d629b9a56c39259"
+    integrity sha512-y7FpHSbMUMoyPbYUSzO6PaZ6FyRnQOpHuKwbo1G+Knck95XVU4QAiKdGEnj5wwoS7PlOgthX/09u5iFJ+aYf5Q==
+    dependencies:
+      braces "^3.0.1"
+      picomatch "^2.0.5"
   
   miller-rabin@^4.0.0:
     version "4.0.1"
@@ -6430,6 +6477,11 @@ Lockfile:
     version "2.1.0"
     resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
     integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
+  
+  picomatch@^2.0.5:
+    version "2.0.7"
+    resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.0.7.tgz#514169d8c7cd0bdbeecc8a2609e34a7163de69f6"
+    integrity sha512-oLHIdio3tZ0qH76NybpeneBhYVj0QFTfXEFTc/B3zKQspYfYYkWYgFsmzo+4kvId/bQRcNkVeguI3y+CD22BtA==
   
   pify@^2.0.0, pify@^2.2.0, pify@^2.3.0:
     version "2.3.0"
@@ -7566,9 +7618,9 @@ Lockfile:
       range-parser "~1.2.1"
       statuses "~1.5.0"
   
-  serialize-javascript@^1.7.0:
-    version "1.7.0"
-    resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-1.7.0.tgz#d6e0dfb2a3832a8c94468e6eb1db97e55a192a65"
+  serialize-javascript@^2.1.1:
+    version "2.1.1"
+    resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-2.1.1.tgz#d6e0dfb2a3832a8c94468e6eb1db97e55a192a65"
     integrity sha512-ke8UG8ulpFOxO8f8gRYabHQe/ZntKlcig2Mp+8+URDP1D8vJZ0KUt7LYo07q25Z/+JVSgpr/cui9PIp5H6/+nA==
   
   serve-index@^1.9.1:
@@ -8115,14 +8167,6 @@ Lockfile:
       unquote "~1.1.1"
       util.promisify "~1.0.0"
   
-  swiper@^4.5.0:
-    version "4.5.0"
-    resolved "https://registry.yarnpkg.com/swiper/-/swiper-4.5.0.tgz#4d870bec4f5abe2fb259325849dd2641c9243c0d"
-    integrity sha512-jRCd/CGet9kaHwthHdd/sL/YU8CI157PWLyItnIcn/o/jP4haVky3zTF6f9F3JDpmQIw7jdWihISiYx0/oTHsg==
-    dependencies:
-      dom7 "^2.1.3"
-      ssr-window "^1.0.1"
-  
   tapable@^1.0.0, tapable@^1.1.0:
     version "1.1.3"
     resolved "https://registry.yarnpkg.com/tapable/-/tapable-1.1.3.tgz#a1fccc06b58db61fd7a45da2da44f5f3a3e67ba2"
@@ -8281,6 +8325,13 @@ Lockfile:
       is-number "^3.0.0"
       repeat-string "^1.6.1"
   
+  to-regex-range@^5.0.1:
+    version "5.0.1"
+    resolved "https://registry.yarnpkg.com/to-regex-range/-/to-regex-range-5.0.1.tgz#1648c44aae7c8d988a326018ed72f5b4dd0392e4"
+    integrity sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
+    dependencies:
+      is-number "^7.0.0"
+  
   to-regex@^3.0.1, to-regex@^3.0.2:
     version "3.0.2"
     resolved "https://registry.yarnpkg.com/to-regex/-/to-regex-3.0.2.tgz#13cfdd9b336552f30b51f33a8ae1b42a7a7599ce"
@@ -8333,6 +8384,17 @@ Lockfile:
     dependencies:
       glob "^7.1.2"
   
+  ts-loader@^6.1.0:
+    version "6.1.0"
+    resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-6.1.0.tgz#999cb0a7644f9c7c6c0901802dce50ceb0a76e5b"
+    integrity sha512-7JedeOu2rsYHQDEr2fwmMozABwbQTZXEaEMZPSIWG7gpzRefOLJCqwdazcegHtyaxp04PeEgs/b0m08WMpnIzQ==
+    dependencies:
+      chalk "^2.3.0"
+      enhanced-resolve "^4.0.0"
+      loader-utils "^1.0.2"
+      micromatch "^4.0.0"
+      semver "^6.0.0"
+  
   tslib@^1.9.0:
     version "1.10.0"
     resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
@@ -8367,6 +8429,11 @@ Lockfile:
     version "0.0.6"
     resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
     integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+  
+  typescript@^3.6.3:
+    version "3.6.3"
+    resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.6.3.tgz#fea942fabb20f7e1ca7164ff626f1a9f3f70b4da"
+    integrity sha512-N7bceJL1CtRQ2RiG0AQME13ksR7DiuQh/QehubYcghzv20tnh+MQnQIuJddTmsbqYj+dztchykemz0zFzlvdQw==
   
   uglify-js@3.4.x:
     version "3.4.10"

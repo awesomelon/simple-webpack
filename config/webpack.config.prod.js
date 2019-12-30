@@ -1,12 +1,10 @@
-/** @format */
-
 const path = require('path'),
 	HtmlWebPackPlugin = require('html-webpack-plugin'),
 	MiniCssExtractPlugin = require('mini-css-extract-plugin'),
 	CleanWebpackPlugin = require('clean-webpack-plugin'),
-	ImageminPlugin = require('imagemin-webpack-plugin').default,
 	TerserPlugin = require('terser-webpack-plugin'),
-	OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+	OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
+	ImageminPlugin = require('imagemin-webpack');
 
 module.exports = {
 	entry: ['./src/index.ts'],
@@ -55,8 +53,7 @@ module.exports = {
 					{
 						loader: 'file-loader',
 						options: {
-							outputPath: 'static/images/',
-							postTransformPublicPath: p => `__webpack_public_path__ + ${p}`
+							outputPath: 'static/images/'
 						}
 					}
 				]
@@ -67,8 +64,7 @@ module.exports = {
 					{
 						loader: 'file-loader',
 						options: {
-							outputPath: 'static/fonts/',
-							postTransformPublicPath: p => `__webpack_public_path__ + ${p}`
+							outputPath: 'static/fonts/'
 						}
 					}
 				]
@@ -116,9 +112,31 @@ module.exports = {
 			filename: 'static/css/style.[contenthash].css'
 		}),
 
+		// Make sure that the plugin is after any plugins that add images, example `CopyWebpackPlugin`
 		new ImageminPlugin({
-			test: /\.(jpe?g|png|gif|svg)$/i,
-			cache: true
+			bail: false, // Ignore errors on corrupted images
+			cache: true,
+			imageminOptions: {
+				// Before using imagemin plugins make sure you have added them in `package.json` (`devDependencies`) and installed them
+
+				// Lossless optimization with custom option
+				// Feel free to experiment with options for better result for you
+				plugins: [
+					['gifsicle', { interlaced: true }],
+					['jpegtran', { progressive: true }],
+					['optipng', { optimizationLevel: 5 }],
+					[
+						'svgo',
+						{
+							plugins: [
+								{
+									removeViewBox: false
+								}
+							]
+						}
+					]
+				]
+			}
 		}),
 
 		new CleanWebpackPlugin()

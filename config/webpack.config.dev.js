@@ -1,5 +1,3 @@
-/** @format */
-
 const path = require('path'),
 	HtmlWebPackPlugin = require('html-webpack-plugin'),
 	MiniCssExtractPlugin = require('mini-css-extract-plugin'),
@@ -57,8 +55,7 @@ module.exports = {
 					{
 						loader: 'file-loader',
 						options: {
-							outputPath: 'static/images/',
-							postTransformPublicPath: p => `__webpack_public_path__ + ${p}`
+							outputPath: 'static/images/'
 						}
 					}
 				]
@@ -69,8 +66,7 @@ module.exports = {
 					{
 						loader: 'file-loader',
 						options: {
-							outputPath: 'static/fonts/',
-							postTransformPublicPath: p => `__webpack_public_path__ + ${p}`
+							outputPath: 'static/fonts/'
 						}
 					}
 				]
