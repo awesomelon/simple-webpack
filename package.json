@@ -63,7 +63,8 @@
 		"ssr-window": "^1.0.1",
 		"ts-loader": "^6.2.1",
 		"typescript": "^3.7.3",
-		"url-loader": "^3.0.0"
+		"url-loader": "^3.0.0",
+		"webpack-babel-multi-target-plugin": "2.3.3"
 	},
 	"repository": "https://github.com/awesomelon/structure-frontend.git"
 }
